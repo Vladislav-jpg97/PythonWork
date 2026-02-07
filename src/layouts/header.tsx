@@ -95,7 +95,7 @@ export const Header = () => {
                         </div>
                     </div>
 
-                    {/* МОБИЛЬНЫЙ БЛОК */}
+                    {/* МОБИЛЬНЫЙ БЛОК ЯЗЫКОВ И КНОПКА МЕНЮ */}
                     <div className="flex lg:hidden items-center gap-4">
                         <div className="flex bg-black/40 p-1 rounded-2xl border border-white/5">
                             {languages.map((lang) => (
@@ -122,12 +122,13 @@ export const Header = () => {
                     </div>
                 </div>
 
-                {/* МОБИЛЬНОЕ ВЫПАДАЮЩЕЕ МЕНЮ */}
+                {/* МОБИЛЬНОЕ ВЫПАДАЮЩЕЕ МЕНЮ (ИСПРАВЛЕННОЕ) */}
                 <div className={cn(
-                    "lg:hidden absolute top-[110%] left-0 w-full overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
+                    "lg:hidden absolute top-[105%] left-0 right-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
                     isMenuOpen ? "max-h-[400px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4"
                 )}>
-                    <nav className="bg-[#0b0e14]/95 backdrop-blur-3xl border border-white/[0.08] rounded-[2.5rem] p-8 flex flex-col gap-2 shadow-2xl shadow-blue-500/10">
+                    {/* Контейнер навигации с небольшим отступом mx-1 чтобы не слипаться с краями */}
+                    <nav className="bg-[#0b0e14]/95 backdrop-blur-3xl border border-white/[0.08] rounded-[2rem] p-4 flex flex-col gap-1 shadow-2xl shadow-blue-500/10 mx-1">
                         {[
                             { href: "/", label: t("navigation.home") },
                             { href: "/about", label: t("navigation.about") },
@@ -135,13 +136,19 @@ export const Header = () => {
                         ].map((link) => (
                             <Link 
                                 key={link.label}
+                                border-radius
                                 href={link.href} 
-                                className="group flex justify-between items-center text-xs font-black uppercase tracking-[0.3em] text-slate-400 hover:text-white p-4 rounded-2xl hover:bg-white/5 transition-all"
+                                className={cn(
+                                    "group flex justify-between items-center text-[10px] font-black uppercase tracking-[0.3em] p-4 rounded-2xl transition-all",
+                                    pathname === link.href 
+                                        ? "bg-white/5 text-blue-500" 
+                                        : "text-slate-400 hover:text-white hover:bg-white/5"
+                                )}
                             >
                                 {link.label}
                                 <div className={cn(
-                                    "w-1.5 h-1.5 rounded-full bg-blue-600 transition-opacity",
-                                    pathname === link.href ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                                    "w-1.5 h-1.5 rounded-full bg-blue-600 transition-all duration-500",
+                                    pathname === link.href ? "opacity-100 scale-125 shadow-[0_0_8px_#3b82f6]" : "opacity-0 group-hover:opacity-100"
                                 )} />
                             </Link>
                         ))}
