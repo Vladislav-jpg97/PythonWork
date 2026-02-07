@@ -37,7 +37,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
                         {/* Правая часть: Основной контент */}
                         <SidebarInset className="flex flex-col min-h-svh bg-[#0b0e14]">
                             {/* Хедер с кнопкой управления сайдбаром */}
-                            <header className="flex h-16 shrink-0 items-center gap-4 border-b border-white/5 px-4 sticky top-0 bg-[#0b0e14]/80 backdrop-blur-md z-30">
+                            <header className="flex h-16 shrink-0 items-center gap-4 px-4 sticky top-0 bg-[#0b0e14]/80 backdrop-blur-md z-30">
                                 <SidebarTrigger className="-ml-1" />
                                 <div className="flex-1">
                                     <Header />

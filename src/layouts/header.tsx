@@ -41,7 +41,7 @@ export const Header = () => {
                 "border border-white/[0.08] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]",
                 isMenuOpen ? "rounded-[1.5rem]" : "rounded-full",
             )}>
-                <div className="absolute inset-0 rounded-inherit border-t border-white/[0.05] pointer-events-none" />
+
                 
                 <div className="relative z-10 h-full px-4 sm:px-14 flex items-center justify-between gap-2">
                     
