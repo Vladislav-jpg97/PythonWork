@@ -1,0 +1,9 @@
+{
+  "Header": {
+    "navigation": {
+      "home": "Главная",
+      "about": "О нас",
+      "contacts": "Контакты"
+    }
+  }
+}

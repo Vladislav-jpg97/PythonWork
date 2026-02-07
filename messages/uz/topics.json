@@ -1,0 +1,330 @@
+{
+  "PythonThemes": {
+    "academy": "Python",
+    "aside_title": "Mundarija",
+    "theory_title": "Mavzu tahlili",
+    "video_title": "Video dars",
+    "visual_title": "Eslatma",
+    "menu": {
+      "theory": "Nazariya",
+      "video": "Video",
+      "visual": "Slaydlar"
+    },
+    "themes": [
+      {
+        "id": "theme_1",
+        "name": "Asoslar: O'zgaruvchilar",
+        "subthemes": [
+          {
+            "id": "vars",
+            "name": "O'zgaruvchilar va ma'lumot turlari"
+          },
+          {
+            "id": "io_basics",
+            "name": "Kiritish va chiqarish (input, print)"
+          },
+          {
+            "id": "syntax_basics",
+            "name": "Izohlar va turlarni o'zgartirish"
+          }
+        ]
+      },
+      {
+        "id": "theme_2",
+        "name": "2. Boshqaruv konstruksiyalari",
+        "subthemes": [
+          {
+            "id": "conditions",
+            "name": "if / elif / else shartlari"
+          },
+          {
+            "id": "operators",
+            "name": "Mantiqiy operatorlar"
+          },
+          {
+            "id": "loops",
+            "name": "for va while sikllari"
+          }
+        ]
+      }
+    ],
+    "content": {
+      "vars": {
+        "name": "O'zgaruvchilar va ma'lumot turlari",
+        "definition": "O'zgaruvchi — bu ma'lumotlarni saqlash uchun 'konteyner'. Uni ustiga yorliq yopishtirilgan quti deb tasavvur qiling. Yorliq — o'zgaruvchining nomi, ichidagi narsa esa uning qiymati. Python dinamik tiplashtirish tufayli qutiga nima solganingizni o'zi tushunadi.",
+        "dynamic_info": "Python-da o'zgaruvchi turini oldindan aytish shart emas. Agar x = 10 deb yozsangiz, u avtomatik Integer bo'ladi.",
+        "types_list": [
+          {
+            "t": "int",
+            "n": "Butun son (Integer)",
+            "ex": "apples = 5",
+            "desc": "Har qanday butun sonlar: musbat, manfiy yoki nol. Buyumlarni sanashda ishlatiladi."
+          },
+          {
+            "t": "float",
+            "n": "Kasr son (Float)",
+            "ex": "pi = 3.14",
+            "desc": "Nuqtali kasr sonlar. Muhim: dasturlashda kasr qismi vergul bilan emas, nuqta bilan ajratiladi."
+          },
+          {
+            "t": "str",
+            "n": "Satr (String)",
+            "ex": "greeting = 'Salom!'",
+            "desc": "Har qanday matn. Python matnni buyruqlar bilan adashtirib yubormasligi uchun uni har doim qo'shtirnoqqa olamiz."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/vars_1.webp",
+            "title": "O'zgaruvchi yaratish",
+            "text": "Nomini yozamiz, barobar belgisini (o'zlashtirish) qo'yamiz va qiymatni yozamiz."
+          },
+          {
+            "id": 2,
+            "img": "/img/vars_2.webp",
+            "title": "Sonlar vs Satrlar",
+            "text": "5 raqami — bu hisob-kitob uchun son. Tirnoq ichidagi '5' — bu shunchaki belgi, u bilan hisoblab bo'lmaydi."
+          },
+          {
+            "id": 3,
+            "img": "/img/vars_3.webp",
+            "title": "O'zgaruvchi nomlari",
+            "text": "Faqat lotin alifbosi va pastki chiziqdan foydalaning. Uslub: mening_ozgaruvchim."
+          }
+        ],
+        "pro_tip": "O'zgaruvchilarga tushunarli nom bering, toki bir oydan keyin ham u yerda nima borligini tushunasiz ('a' emas, 'user_balance').",
+        "warning": "Python harflar registriga sezgir! 'Age' va 'age' — bular ikkita turli quti."
+      },
+      "io_basics": {
+        "name": "Muloqot: print() va input()",
+        "definition": "Dastur faqat 'o'zi bilan o'zi' bo'lib qolmasligi uchun u foydalanuvchi bilan muloqot qilishi kerak. print() buyrug'i ma'lumotni ekranga chiqaradi, input() esa foydalanuvchiga biror narsa yozish va dasturga yuborish imkonini beradi.",
+        "dynamic_info": "input() funksiyasi har doim matn (string) qaytaradi, hatto siz son kiritgan bo'lsangiz ham!",
+        "types_list": [
+          {
+            "t": "print()",
+            "n": "Ma'lumotni chiqarish",
+            "ex": "print('Muvaffaqiyat!')",
+            "desc": "Qavs ichida berilgan hamma narsani konsolga chiqaradi."
+          },
+          {
+            "t": "input()",
+            "n": "Ma'lumotni kiritish",
+            "ex": "name = input()",
+            "desc": "Dasturni to'xtatadi va foydalanuvchi Enter tugmasini bosishini kutadi."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/io_1.webp",
+            "title": "print funksiyasi",
+            "text": "Bir nechta qiymatni vergul bilan ajratib chiqarish mumkin: print('Hisob:', score)."
+          },
+          {
+            "id": 2,
+            "img": "/img/io_2.webp",
+            "title": "input ichidagi savol",
+            "text": "input ichida ko'rsatma yozish mumkin: input('Ismingiz nima? ')."
+          },
+          {
+            "id": 3,
+            "img": "/img/io_3.webp",
+            "title": "f-satrlar",
+            "text": "Eng qulay chiqarish usuli: print(f'Salom, {name}!') o'zgaruvchi qiymatini to'g'ridan-to'g'ri matnga qo'yadi."
+          }
+        ],
+        "pro_tip": "Agar konsolda bo'sh qator tashlamoqchi bo'lsangiz, argumentlarsiz bo'sh print() qo'shing.",
+        "warning": "Unutmang, input() funksiyasidan keyin dastur siz ma'lumot kiritmaguningizcha 'muzlab' qoladi."
+      },
+      "syntax_basics": {
+        "name": "Izohlar va Turlarni o'zgartirish",
+        "definition": "Izohlar — bu dasturchi uchun qaydlar bo'lib, kompyuter ularni e'tiborsiz qoldiradi. Turlarni o'zgartirish — bu bir ma'lumot turini boshqasiga aylantirish (masalan, matndan songa).",
+        "dynamic_info": "Turini majburiy o'zgartirish uchun int(), float(), str() funksiyalaridan foydalaning.",
+        "types_list": [
+          {
+            "t": "#",
+            "n": "Izoh (Comment)",
+            "ex": "# Bu qator ishlamaydi",
+            "desc": "Panjara belgisidan keyingi hamma narsani Python ko'rmaydi. Murakkab kodni tushuntirishga yordam beradi."
+          },
+          {
+            "t": "int()",
+            "n": "Butun songa",
+            "ex": "int('10')",
+            "desc": "'10' matnini haqiqiy 10 soniga aylantiradi, u bilan hisoblash mumkin."
+          },
+          {
+            "t": "str()",
+            "n": "Satrga",
+            "ex": "str(500)",
+            "desc": "500 sonini '500' matniga aylantiradi. Boshqa matnlar bilan birlashtirish uchun kerak."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/syntax_1.webp",
+            "title": "Izohlar nima uchun kerak",
+            "text": "Ular sizga va hamkasblaringizga kodni vaqt o'tgandan keyin tushunishga yordam beradi."
+          },
+          {
+            "id": 2,
+            "img": "/img/syntax_2.webp",
+            "title": "Tur xatoligi",
+            "text": "Agar son va matnni qo'shmoqchi bo'lsangiz '5' + 5, Python TypeError xatosini beradi."
+          },
+          {
+            "id": 3,
+            "img": "/img/syntax_3.webp",
+            "title": "To'g'ri qo'shish",
+            "text": "Avval matnni songa aylantiring: int('5') + 5. Endi natija 10 bo'ladi."
+          }
+        ],
+        "pro_tip": "Izohlarni shunday yozingki, sizdan keyin kodni o'qiydigan odam sizning manzilingizni biladigan jahldor inson bo'lmasin.",
+        "warning": "'Salom' matnini int() orqali songa aylantirish xatoga olib keladi, chunki so'z ichida raqamlar yo'q."
+      },
+      "conditions": {
+        "name": "if / elif / else shartlari",
+        "definition": "Shartli konstruksiyalar dasturga qaror qabul qilish imkonini beradi. Kod faqat shart rost (True) bo'lgandagina ishlaydi. Agar birinchi shart xato bo'lsa, elif bloki tekshiriladi, agar hech biri to'g'ri kelmasa — else ishga tushadi.",
+        "dynamic_info": "Python-da probellar (4 ta probel) shunchaki uslub emas, balki sintaksis talabidir. Ularsiz kod nima shartga tegishli ekanligini tushunmaydi.",
+        "types_list": [
+          {
+            "t": "if",
+            "n": "Agar",
+            "ex": "if x > 0:",
+            "desc": "Asosiy shartni tekshirish."
+          },
+          {
+            "t": "elif",
+            "n": "Aks holda agar",
+            "ex": "elif x == 0:",
+            "desc": "Birinchi shart ish bermasa, qo'shimcha tekshiruv."
+          },
+          {
+            "t": "else",
+            "n": "Aks holda",
+            "ex": "else:",
+            "desc": "Boshqa barcha holatlarda ishlaydi."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/if_1.webp",
+            "title": "Tarmoqlanish mantiqi",
+            "text": "Dastur taklif qilingan yo'llardan faqat bittasini tanlaydi."
+          },
+          {
+            "id": 2,
+            "img": "/img/if_2.webp",
+            "title": "Ichma-ichlik",
+            "text": "Siz if ichida yana bir if yozishingiz mumkin, lekin buni juda ko'p ishlatmang."
+          },
+          {
+            "id": 3,
+            "img": "/img/if_3.webp",
+            "title": "Pass",
+            "text": "Agar shart kerak bo'lsa-yu, lekin u yerga nima yozishni hali o'ylab topmagan bo'lsangiz, pass-dan foydalaning."
+          }
+        ],
+        "pro_tip": "Zanjirda eng ehtimolli shartni birinchi bo'lib qo'yishga harakat qiling — bu kodni biroz tezlashtiradi.",
+        "warning": "if, elif va else bilan tugaydigan har bir qator oxiriga ikki nuqta (:) qo'yishni unutmang!"
+      },
+      "operators": {
+        "name": "Mantiqiy operatorlar",
+        "definition": "and, or va not operatorlari bir nechta shartlarni bittaga birlashtirishga imkon beradi. Bu dastur mantiqini yanada moslashuvchan va murakkab qiladi.",
+        "dynamic_info": "Python 'dangasa hisoblash'dan foydalanadi: 'A and B' holatida, agar A xato bo'lsa, B tekshirib ham o'tirilmaydi.",
+        "types_list": [
+          {
+            "t": "and",
+            "n": "Mantiqiy VA",
+            "ex": "if x > 0 and y > 0:",
+            "desc": "Faqat IKKALA shart ham to'g'ri bo'lganda rost bo'ladi."
+          },
+          {
+            "t": "or",
+            "n": "Mantiqiy YOKI",
+            "ex": "if x > 0 or y > 0:",
+            "desc": "Kamida BITTA shart to'g'ri bo'lsa rost bo'ladi."
+          },
+          {
+            "t": "not",
+            "n": "Mantiqiy EMAS",
+            "ex": "if not x:",
+            "desc": "Natijani teskarisiga o'zgartiradi (True-ni False-ga aylantiradi)."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/ops_1.webp",
+            "title": "Ustuvorliklar",
+            "text": "Avval not, keyin and va oxirida or bajariladi."
+          },
+          {
+            "id": 2,
+            "img": "/img/ops_2.webp",
+            "title": "Qavslar",
+            "text": "Shartlarni tekshirish tartibini aniq ko'rsatish uchun () qavslardan foydalaning."
+          },
+          {
+            "id": 3,
+            "img": "/img/ops_3.webp",
+            "title": "Qisqartmalar",
+            "text": "Python-da (x > 0 and x < 10) o'rniga 0 < x < 10 deb yozish mumkin."
+          }
+        ],
+        "pro_tip": "and — ko'paytirishga, or — qo'shishga o'xshaydi. Bu ustuvorliklarni eslab qolishga yordam beradi.",
+        "warning": "'and'ni '&' bilan aralashtirib yubormang — bular har xil operatorlar (mantiqiy va bitli)."
+      },
+      "loops": {
+        "name": "for va while sikllari",
+        "definition": "Sikllar harakatlarni takrorlash uchun kerak. While shart rost bo'lguncha ishlaydi. For ro'yxatdagi elementlarni yoki sonlar diapazonini (range) aylanib chiqadi.",
+        "dynamic_info": "Python-dagi for sikli — bu iterrator bo'lib, u ma'lumotlar to'plami bilan ishlashda juda samarali.",
+        "types_list": [
+          {
+            "t": "while",
+            "n": "Toki",
+            "ex": "while x < 5:",
+            "desc": "Shart rost bo'lguncha takrorlanadi."
+          },
+          {
+            "t": "for",
+            "n": "Har biri uchun",
+            "ex": "for i in range(5):",
+            "desc": "Ketma-ketlik elementlarini aylanib chiqadi."
+          },
+          {
+            "t": "break / continue",
+            "n": "Boshqaruv",
+            "ex": "break",
+            "desc": "break — sikldan chiqish, continue — keyingi aylanishga o'tish."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/loops_1.webp",
+            "title": "Range",
+            "text": "range(5) 0 dan 4 gacha bo'lgan sonlarni yaratadi. Oxirgi son kirmaydi!"
+          },
+          {
+            "id": 2,
+            "img": "/img/loops_2.webp",
+            "title": "Cheksiz sikl",
+            "text": "Agar while sharti doimo True bo'lsa, dastur hech qachon to'xtamaydi."
+          },
+          {
+            "id": 3,
+            "img": "/img/loops_3.webp",
+            "title": "Sikldagi Else",
+            "text": "Sikl break yordamisiz yakunlansa, sikldan keyingi else bloki ishga tushadi."
+          }
+        ],
+        "pro_tip": "Takrorlanishlar sonini bilsangiz for, bilmasangiz while-dan foydalaning.",
+        "warning": "while ichida qiymat o'zgarayotganiga ishonch hosil qiling, aks holda dastur 'osilib' qoladi."
+      }
+    }
+  }
+}

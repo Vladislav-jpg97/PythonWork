@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🐍 Python Academy — Interactive Learning Dashboard
+Современная образовательная платформа для изучения Python, построенная на базе Next.js 15. Проект ориентирован на высокую производительность, адаптивность и удобство пользователя (UX).
 
-## Getting Started
+🛠 Технологический стек
+Core
+Framework: Next.js 15 (App Router) — использование серверных компонентов и оптимизированной навигации.
 
-First, run the development server:
+Language: TypeScript — строгая типизация для минимизации ошибок.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Internationalization: next-intl — полная поддержка мультиязычности (i18n).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+UI & Styling
+Styling: Tailwind CSS — методология Utility-first для быстрой и гибкой верстки.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Components: Shadcn UI — база для доступных и эстетичных компонентов.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Typography: Geist Sans & Mono — современные шрифты от Vercel для лучшей читаемости кода.
 
-## Learn More
+Icons: Lucide React — легковесные векторные иконки.
 
-To learn more about Next.js, take a look at the following resources:
+🌟 Ключевые особенности
+Professional Responsive Design:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Сложная сетка (Grid Layout), которая трансформируется под мобильные устройства, планшеты и 2K мониторы.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Адаптивная типографика (Fluid Typography) — размеры заголовков плавно подстраиваются под ширину экрана.
 
-## Deploy on Vercel
+Smart UX:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Smooth Scroll: Плавная навигация между разделами (Теория / Видео / Слайды).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Intersection Observer API: Автоматическое отслеживание активного раздела в боковом меню при скролле.
+
+Glassmorphism Effects: Современный интерфейс с использованием блюров, градиентов и полупрозрачных текстур.
+
+Content Management:
+
+Динамическая подгрузка контента из JSON-локалей.
+
+Кастомный слайдер для визуальных шпаргалок.
+
+Блоки с предупреждениями (warning) и профессиональными советами (pro_tip).

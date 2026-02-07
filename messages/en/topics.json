@@ -1,0 +1,332 @@
+{
+  "PythonThemes": {
+    "academy": "Python",
+    "aside_title": "Content",
+    "theory_title": "Topic Breakdown",
+    "video_title": "Video Lesson",
+    "visual_title": "Cheat Sheet",
+    "menu": {
+      "theory": "Theory",
+      "video": "Video",
+      "visual": "Slides"
+    },
+    "themes": [
+      {
+        "id": "theme_1",
+        "name": "Basics: Variables",
+        "subthemes": [
+          {
+            "id": "vars",
+            "name": "Variables and Data Types"
+          },
+          {
+            "id": "io_basics",
+            "name": "Input and Output (input, print)"
+          },
+          {
+            "id": "syntax_basics",
+            "name": "Comments and Casting"
+          }
+        ]
+      },
+      {
+        "id": "theme_2",
+        "name": "2. Control Flow",
+        "subthemes": [
+          {
+            "id": "conditions",
+            "name": "Conditions if / elif / else"
+          },
+          {
+            "id": "operators",
+            "name": "Logical Operators"
+          },
+          {
+            "id": "loops",
+            "name": "Loops for and while"
+          }
+        ]
+      }
+    ],
+    "content": {
+      "vars": {
+        "name": "Variables and Data Types",
+        "definition": "A variable is a 'container' for storing information. Imagine it as a box with a label. The label is the variable's name, and what's inside is its value. Python understands exactly what you put in the box thanks to dynamic typing.",
+        "dynamic_info": "In Python, you don't need to tell the computer in advance that a variable will hold a number. If you write x = 10, it automatically understands it's an Integer.",
+        "types_list": [
+          {
+            "t": "int",
+            "n": "Integer",
+            "ex": "apples = 5",
+            "desc": "Any whole numbers: positive, negative, or zero. Used for counting items."
+          },
+          {
+            "t": "float",
+            "n": "Float",
+            "ex": "pi = 3.14",
+            "desc": "Numbers with a decimal point. Note: in programming, the fractional part is separated by a dot, not a comma."
+          },
+          {
+            "t": "str",
+            "n": "String",
+            "ex": "greeting = 'Hello!'",
+            "desc": "Any text. To prevent Python from confusing text with commands, we always wrap it in quotes (single or double)."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/vars_1.webp",
+            "title": "Creating a Variable",
+            "text": "Write the name, put an equal sign (assignment), and the value itself."
+          },
+          {
+            "id": 2,
+            "img": "/img/vars_2.webp",
+            "title": "Numbers vs Strings",
+            "text": "The digit 5 is a number for calculations. '5' in quotes is just a character-image; you can't calculate with it."
+          },
+          {
+            "id": 3,
+            "img": "/img/vars_3.webp",
+            "title": "Variable Names",
+            "text": "Use only Latin characters and underscores. Style: my_variable_name."
+          }
+        ],
+        "pro_tip": "Name variables so that even a month later you understand what's in them (not 'a', but 'user_balance').",
+        "warning": "Python is case-sensitive! The variables 'Age' and 'age' are two different boxes."
+      },
+      "io_basics": {
+        "name": "Interaction: print() and input()",
+        "definition": "For a program not to be 'isolated,' it needs to communicate with the user. The print() command displays information on the screen, while input() allows the user to type something and send it to the program.",
+        "dynamic_info": "The input() function always returns text (a string), even if you entered a number!",
+        "types_list": [
+          {
+            "t": "print()",
+            "n": "Output Data",
+            "ex": "print('Success!')",
+            "desc": "Prints everything you pass in the parentheses to the console."
+          },
+          {
+            "t": "input()",
+            "n": "Input Data",
+            "ex": "name = input()",
+            "desc": "Pauses the program and waits until the user presses Enter."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/io_1.webp",
+            "title": "Print Function",
+            "text": "You can output multiple values separated by commas: print('Score:', score)."
+          },
+          {
+            "id": 2,
+            "img": "/img/io_2.webp",
+            "title": "Input Prompt",
+            "text": "Inside input, you can write a hint: input('What is your name? ')."
+          },
+          {
+            "id": 3,
+            "img": "/img/io_3.webp",
+            "title": "f-strings",
+            "text": "The most convenient output: print(f'Hello, {name}!') will insert the variable's value directly into the text."
+          }
+        ],
+        "pro_tip": "Add an empty print() without arguments if you want to create an empty line break in the console.",
+        "warning": "Don't forget that after input(), the program 'freezes' until you provide data."
+      },
+      "syntax_basics": {
+        "name": "Comments and Type Casting",
+        "definition": "Comments are notes for the programmer that the computer ignores. Type casting is converting one data type to another (for example, from text to a number).",
+        "dynamic_info": "Use the functions int(), float(), str() to force a type change.",
+        "types_list": [
+          {
+            "t": "#",
+            "n": "Comment",
+            "ex": "# This won't run",
+            "desc": "Anything after the hash mark is invisible to Python. Helps explain complex code."
+          },
+          {
+            "t": "int()",
+            "n": "To Integer",
+            "ex": "int('10')",
+            "desc": "Converts the string '10' into the actual number 10, which can be used for math."
+          },
+          {
+            "t": "str()",
+            "n": "To String",
+            "ex": "str(500)",
+            "desc": "Turns the number 500 into the text '500'. Useful for joining with other text."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/syntax_1.webp",
+            "title": "Why Comments are Needed",
+            "text": "They help you and your colleagues understand the code after some time has passed."
+          },
+          {
+            "id": 2,
+            "img": "/img/syntax_2.webp",
+            "title": "Type Error",
+            "text": "If you try to add a number and text '5' + 5, Python will raise a TypeError."
+          },
+          {
+            "id": 3,
+            "img": "/img/syntax_3.webp",
+            "title": "Correct Addition",
+            "text": "First convert the text to a number: int('5') + 5. Now the result will be 10."
+          }
+        ],
+        "pro_tip": "Write comments as if the person reading your code is a violent psychopath who knows where you live.",
+        "warning": "Casting the text 'Hello' to a number using int() will cause an error because there are no digits in the word."
+      },
+      
+        "conditions": {
+          "name": "Conditions if / elif / else",
+          "definition": "Conditional structures allow the program to make decisions. Code is executed only if the condition is True. If the first condition is false, the elif block is checked, and if nothing matches, the else block triggers.",
+          "dynamic_info": "In Python, indentation (4 spaces) is not just a style choice, but a syntax requirement. Without them, the code won't understand what belongs to the condition.",
+          "types_list": [
+            {
+              "t": "if",
+              "n": "If",
+              "ex": "if x > 0:",
+              "desc": "Basic condition check."
+            },
+            {
+              "t": "elif",
+              "n": "Else if",
+              "ex": "elif x == 0:",
+              "desc": "Additional check if the first condition fails."
+            },
+            {
+              "t": "else",
+              "n": "Else",
+              "ex": "else:",
+              "desc": "Triggers in all other cases."
+            }
+          ],
+          "slides": [
+            {
+              "id": 1,
+              "img": "/img/if_1.webp",
+              "title": "Branching Logic",
+              "text": "The program chooses only one execution path from the proposed ones."
+            },
+            {
+              "id": 2,
+              "img": "/img/if_2.webp",
+              "title": "Nesting",
+              "text": "You can put an if inside another if, but don't do it too often."
+            },
+            {
+              "id": 3,
+              "img": "/img/if_3.webp",
+              "title": "Pass",
+              "text": "Use pass if a condition is needed, but you haven't decided what to write there yet."
+            }
+          ],
+          "pro_tip": "Try to place the most likely condition first in the chain — this slightly speeds up the code.",
+          "warning": "Don't forget to put a colon (:) at the end of every line with if, elif, and else!"
+        },
+        "operators": {
+          "name": "Logical Operators",
+          "definition": "The and, or, and not operators allow you to combine multiple conditions into one. This makes the program logic more flexible and complex.",
+          "dynamic_info": "Python uses 'lazy evaluation': in 'A and B', if A is false, B won't even be checked.",
+          "types_list": [
+            {
+              "t": "and",
+              "n": "Logical AND",
+              "ex": "if x > 0 and y > 0:",
+              "desc": "True only when BOTH conditions are correct."
+            },
+            {
+              "t": "or",
+              "n": "Logical OR",
+              "ex": "if x > 0 or y > 0:",
+              "desc": "True if at least ONE condition is correct."
+            },
+            {
+              "t": "not",
+              "n": "Logical NOT",
+              "ex": "if not x:",
+              "desc": "Inverts the result (turns True into False)."
+            }
+          ],
+          "slides": [
+            {
+              "id": 1,
+              "img": "/img/ops_1.webp",
+              "title": "Priorities",
+              "text": "First not is executed, then and, and finally or."
+            },
+            {
+              "id": 2,
+              "img": "/img/ops_2.webp",
+              "title": "Brackets",
+              "text": "Use brackets () to explicitly specify the order of condition checks."
+            },
+            {
+              "id": 3,
+              "img": "/img/ops_3.webp",
+              "title": "Shortcuts",
+              "text": "In Python, you can write 0 < x < 10 instead of (x > 0 and x < 10)."
+            }
+          ],
+          "pro_tip": "and is like multiplication, or is like addition. This helps in remembering priorities.",
+          "warning": "Don't confuse 'and' with '&' — these are different operators (logical and bitwise)."
+        },
+        "loops": {
+          "name": "Loops for and while",
+          "definition": "Loops are needed for repeating actions. While works as long as the condition is true. For iterates over elements in a list or a range of numbers.",
+          "dynamic_info": "The for loop in Python is an iterator; it's very efficient when working with data collections.",
+          "types_list": [
+            {
+              "t": "while",
+              "n": "While",
+              "ex": "while x < 5:",
+              "desc": "Repeats as long as the condition is true."
+            },
+            {
+              "t": "for",
+              "n": "For each",
+              "ex": "for i in range(5):",
+              "desc": "Iterates through the elements of a sequence."
+            },
+            {
+              "t": "break / continue",
+              "n": "Control",
+              "ex": "break",
+              "desc": "break — exit the loop, continue — skip to the next iteration."
+            }
+          ],
+          "slides": [
+            {
+              "id": 1,
+              "img": "/img/loops_1.webp",
+              "title": "Range",
+              "text": "range(5) will create numbers from 0 to 4. The last number is not included!"
+            },
+            {
+              "id": 2,
+              "img": "/img/loops_2.webp",
+              "title": "Infinite Loop",
+              "text": "If the while condition is always True, the program will never stop."
+            },
+            {
+              "id": 3,
+              "img": "/img/loops_3.webp",
+              "title": "Else in Loop",
+              "text": "The else block after a loop will trigger if the loop finished without using break."
+            }
+          ],
+          "pro_tip": "Use for when you know the number of repetitions, and while when you don't.",
+          "warning": "Make sure the value changes inside while, otherwise you'll get a program 'hang'."
+        
+      }
+    }
+  }
+}
