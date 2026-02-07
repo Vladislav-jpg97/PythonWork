@@ -31,24 +31,25 @@ export const Header = () => {
     }, [pathname]);
 
     return (
-        <div className="fixed top-3 sm:top-6 z-[100] w-full px-4 sm:px-8">
+        <div className="fixed top-3 sm:top-6 left-0 right-0 z-[100] px-3 sm:px-8 flex sm:justify-center pointer-events-none">
             <header className={cn(
-                "max-w-7xl mx-auto relative transition-all duration-700 ease-in-out",
-                "bg-[#0b0e14]/70 backdrop-blur-3xl",
+                "relative transition-all duration-700 ease-in-out pointer-events-auto",
+                "ml-12 sm:ml-0", 
+                "w-[calc(100%-3.5rem)] sm:w-full sm:max-w-7xl",
+                "h-14 sm:h-24", 
+                "bg-[#0b0e14]/80 backdrop-blur-3xl",
                 "border border-white/[0.08] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]",
-                isMenuOpen ? "rounded-[2rem]" : "rounded-[2.5rem] sm:rounded-[4rem]",
-                "h-16 sm:h-24"
+                isMenuOpen ? "rounded-[1.5rem]" : "rounded-full",
             )}>
-                {/* Внутреннее свечение (Inner Glow) */}
                 <div className="absolute inset-0 rounded-inherit border-t border-white/[0.05] pointer-events-none" />
                 
-                <div className="relative z-10 h-full px-6 sm:px-10 lg:px-14 flex items-center justify-between">
+                <div className="relative z-10 h-full px-4 sm:px-14 flex items-center justify-between gap-2">
                     
-                    {/* ЛОГОТИП */}
-                    <Link href="/" className="group flex items-center gap-2 relative transition-transform active:scale-95">
-                        <div className="text-base sm:text-xl font-black tracking-[0.25em] text-white uppercase italic">
-                            PY<span className="text-slate-500 group-hover:text-slate-300 transition-colors">THON</span>
-                            <span className="text-blue-500 group-hover:text-blue-400 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all">WORK</span>
+                    {/* ЛОГОТИП С ВЕРНУТОЙ АНИМАЦИЕЙ */}
+                    <Link href="/" className="group flex items-center gap-2 relative shrink-0 transition-transform duration-300 active:scale-95">
+                        <div className="text-[10px] sm:text-xl font-black tracking-[0.1em] sm:tracking-[0.2em] text-white uppercase italic transition-all">
+                            PY<span className="text-slate-500 group-hover:text-slate-300 transition-colors duration-300">THON</span>
+                            <span className="text-blue-500 group-hover:text-blue-400 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-300">WORK</span>
                         </div>
                     </Link>
 
@@ -61,10 +62,10 @@ export const Header = () => {
                                 { href: "/contacts", label: t("navigation.contacts") }
                             ].map((item) => (
                                 <Link 
-                                    key={item.label}
+                                    key={item.label} 
                                     href={item.href} 
                                     className={cn(
-                                        "relative py-2 transition-all duration-300 hover:text-white group",
+                                        "relative py-2 transition-all duration-300 hover:text-white group", 
                                         pathname === item.href && "text-blue-500"
                                     )}
                                 >
@@ -73,20 +74,15 @@ export const Header = () => {
                                 </Link>
                             ))}
                         </nav>
-
                         <div className="h-8 w-px bg-white/10" />
-
-                        {/* Переключатель языков (Desktop) */}
-                        <div className="flex items-center gap-1 bg-black/40 p-1.5 rounded-[1.5rem] border border-white/5 shadow-inner">
+                        <div className="flex items-center gap-1 bg-black/40 p-1.5 rounded-full border border-white/5 shadow-inner">
                             {languages.map((lang) => (
-                                <button
-                                    key={lang.id}
-                                    onClick={() => handleLanguageChange(lang.id)}
+                                <button 
+                                    key={lang.id} 
+                                    onClick={() => handleLanguageChange(lang.id)} 
                                     className={cn(
-                                        "px-4 py-2 rounded-xl text-[9px] font-black transition-all duration-500 uppercase tracking-widest",
-                                        locale === lang.id 
-                                            ? "bg-blue-600 text-white shadow-[0_10px_20px_rgba(37,99,235,0.3)]" 
-                                            : "text-slate-500 hover:text-slate-300 hover:bg-white/5"
+                                        "px-4 py-2 rounded-full text-[9px] font-black transition-all duration-500 uppercase tracking-widest", 
+                                        locale === lang.id ? "bg-blue-600 text-white shadow-[0_10px_20px_rgba(37,99,235,0.3)]" : "text-slate-500 hover:text-slate-300"
                                     )}
                                 >
                                     {lang.label}
@@ -95,16 +91,16 @@ export const Header = () => {
                         </div>
                     </div>
 
-                    {/* МОБИЛЬНЫЙ БЛОК ЯЗЫКОВ И КНОПКА МЕНЮ */}
-                    <div className="flex lg:hidden items-center gap-4">
-                        <div className="flex bg-black/40 p-1 rounded-2xl border border-white/5">
+                    {/* МОБИЛЬНЫЙ БЛОК */}
+                    <div className="flex lg:hidden items-center gap-2">
+                        <div className="flex bg-black/40 p-0.5 rounded-full border border-white/5">
                             {languages.map((lang) => (
-                                <button
-                                    key={lang.id}
-                                    onClick={() => handleLanguageChange(lang.id)}
+                                <button 
+                                    key={lang.id} 
+                                    onClick={() => handleLanguageChange(lang.id)} 
                                     className={cn(
-                                        "px-2.5 py-1.5 rounded-xl text-[9px] font-black transition-all duration-300",
-                                        locale === lang.id ? "bg-blue-600 text-white shadow-lg" : "text-slate-500"
+                                        "px-2 py-1 rounded-full text-[7px] font-bold transition-all duration-300", 
+                                        locale === lang.id ? "bg-blue-600 text-white shadow-md" : "text-slate-500"
                                     )}
                                 >
                                     {lang.id.toUpperCase()}
@@ -113,43 +109,35 @@ export const Header = () => {
                         </div>
 
                         <button 
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="p-3 text-white bg-white/5 hover:bg-white/10 rounded-2xl transition-all active:scale-90"
-                            aria-label="Toggle menu"
+                            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+                            className="p-2 text-white bg-white/5 hover:bg-white/10 rounded-full transition-all active:scale-90"
                         >
-                            {isMenuOpen ? <X size={22} className="text-blue-500" /> : <Menu size={22} />}
+                            {isMenuOpen ? <X size={16} className="text-blue-500" /> : <Menu size={16} />}
                         </button>
                     </div>
                 </div>
 
-                {/* МОБИЛЬНОЕ ВЫПАДАЮЩЕЕ МЕНЮ (ИСПРАВЛЕННОЕ) */}
+                {/* ВЫПАДАЮЩЕЕ МЕНЮ */}
                 <div className={cn(
-                    "lg:hidden absolute top-[105%] left-0 right-0 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
-                    isMenuOpen ? "max-h-[400px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4"
+                    "lg:hidden absolute top-[115%] left-0 right-0 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]", 
+                    isMenuOpen ? "max-h-[300px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"
                 )}>
-                    {/* Контейнер навигации с небольшим отступом mx-1 чтобы не слипаться с краями */}
-                    <nav className="bg-[#0b0e14]/95 backdrop-blur-3xl border border-white/[0.08] rounded-[2rem] p-4 flex flex-col gap-1 shadow-2xl shadow-blue-500/10 mx-1">
+                    <nav className="bg-[#0b0e14]/95 backdrop-blur-3xl border border-white/[0.08] rounded-[1.5rem] p-2 flex flex-col gap-1 shadow-2xl mx-1">
                         {[
                             { href: "/", label: t("navigation.home") },
                             { href: "/about", label: t("navigation.about") },
                             { href: "/contacts", label: t("navigation.contacts") }
                         ].map((link) => (
                             <Link 
-                                key={link.label}
-                                border-radius
+                                key={link.label} 
                                 href={link.href} 
                                 className={cn(
-                                    "group flex justify-between items-center text-[10px] font-black uppercase tracking-[0.3em] p-4 rounded-2xl transition-all",
-                                    pathname === link.href 
-                                        ? "bg-white/5 text-blue-500" 
-                                        : "text-slate-400 hover:text-white hover:bg-white/5"
+                                    "flex justify-between items-center text-[9px] font-black uppercase tracking-widest p-3 rounded-xl transition-all",
+                                    pathname === link.href ? "bg-white/5 text-blue-500" : "text-slate-400 hover:bg-white/5 hover:text-white"
                                 )}
                             >
                                 {link.label}
-                                <div className={cn(
-                                    "w-1.5 h-1.5 rounded-full bg-blue-600 transition-all duration-500",
-                                    pathname === link.href ? "opacity-100 scale-125 shadow-[0_0_8px_#3b82f6]" : "opacity-0 group-hover:opacity-100"
-                                )} />
+                                {pathname === link.href && <div className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_#2563eb]" />}
                             </Link>
                         ))}
                     </nav>
