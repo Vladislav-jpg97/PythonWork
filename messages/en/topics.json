@@ -12,6 +12,20 @@
     },
     "themes": [
       {
+        "id": "theme_0",
+        "name": "0. Preparation: Installation",
+        "subthemes": [
+          {
+            "id": "install_python",
+            "name": "Installing Python on your PC"
+          },
+          {
+            "id": "pycharm_setup",
+            "name": "Setting up Environment (PyCharm)"
+          }
+        ]
+      },
+      {
         "id": "theme_1",
         "name": "Basics: Variables",
         "subthemes": [
@@ -49,6 +63,78 @@
       }
     ],
     "content": {
+      "install_python": {
+        "name": "Installing Python",
+        "definition": "To make your computer understand Python, you need to install an interpreter. It translates your code into commands the processor can execute. Always download it from python.org.",
+        "dynamic_info": "Version 3.12+ is current for Windows. Python is often pre-installed on macOS/Linux, but it should be updated.",
+        "types_list": [
+          {
+            "t": "Windows",
+            "n": "Windows Install",
+            "ex": "Add Python to PATH",
+            "desc": "Make sure to check 'Add Python to PATH' during installation, otherwise commands won't work in terminal."
+          },
+          {
+            "t": "macOS",
+            "n": "macOS Install",
+            "ex": "brew install python",
+            "desc": "Best installed via Homebrew package manager or by downloading the .pkg file from the website."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "public/img/pychrm&python/python.png",
+            "title": "Official Website",
+            "text": "Visit python.org/downloads. The site will detect your OS automatically."
+          }
+        ],
+        "pro_tip": "Avoid Python from the Microsoft Store; the official installer is more reliable for developers.",
+        "warning": "Never delete the system Python on macOS/Linux — it might break your OS!",
+        "video_id": "CfqX2_xY8VQ?list=PLDyJYA6aTY1lPWXBPk0gw6gR8fEtPDGKa&t=35"
+      },
+      "pycharm_setup": {
+        "name": "PyCharm Setup",
+        "definition": "PyCharm is a powerful IDE. It checks for errors on the fly, helps you write code faster, and manages your projects. We will use the free Community Edition.",
+        "dynamic_info": "PyCharm automatically creates virtual environments (venv) to keep project-specific libraries isolated.",
+        "types_list": [
+          {
+            "t": "Community",
+            "n": "PyCharm Community",
+            "ex": "Free version",
+            "desc": "The free, open-source version for learning and pure Python development."
+          },
+          {
+            "t": "venv",
+            "n": "Virtual Environment",
+            "ex": "venv",
+            "desc": "An isolated folder inside your project containing its own set of libraries and an interpreter."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/pychrm&python/pycharm.png",
+            "title": "Downloading",
+            "text": "Download the 'Community Edition' from jetbrains.com."
+          },
+          {
+            "id": 2,
+            "img": "/img/pychrm&python/pycharm2.png",
+            "title": "New Project",
+            "text": "Click 'New Project' and ensure 'New Virtualenv environment' is selected."
+          },
+          {
+            "id": 3,
+            "img": "/img/pychrm&python/pycharm3.png",
+            "title": "Running Code",
+            "text": "Right-click your Python file and select 'Run' to execute your program."
+          }
+        ],
+        "pro_tip": "Press Shift twice (Double Shift) to find any setting, file, or action within PyCharm.",
+        "warning": "If your code doesn't run, check the 'Python Interpreter' in the project settings.",
+        "video_id": "пусто"
+      },
       "vars": {
         "name": "Variables and Data Types",
         "definition": "A variable is a 'container' for storing information. Imagine it as a box with a label. The label is the variable's name, and what's inside is its value. Python understands exactly what you put in the box thanks to dynamic typing.",
@@ -94,7 +180,8 @@
           }
         ],
         "pro_tip": "Name variables so that even a month later you understand what's in them (not 'a', but 'user_balance').",
-        "warning": "Python is case-sensitive! The variables 'Age' and 'age' are two different boxes."
+        "warning": "Python is case-sensitive! The variables 'Age' and 'age' are two different boxes.",
+        "video_id": "пусто"
       },
       "io_basics": {
         "name": "Interaction: print() and input()",
@@ -135,7 +222,8 @@
           }
         ],
         "pro_tip": "Add an empty print() without arguments if you want to create an empty line break in the console.",
-        "warning": "Don't forget that after input(), the program 'freezes' until you provide data."
+        "warning": "Don't forget that after input(), the program 'freezes' until you provide data.",
+        "video_id": "пусто"
       },
       "syntax_basics": {
         "name": "Comments and Type Casting",
@@ -182,150 +270,151 @@
           }
         ],
         "pro_tip": "Write comments as if the person reading your code is a violent psychopath who knows where you live.",
-        "warning": "Casting the text 'Hello' to a number using int() will cause an error because there are no digits in the word."
+        "warning": "Casting the text 'Hello' to a number using int() will cause an error because there are no digits in the word.",
+        "video_id": "пусто"
       },
-      
-        "conditions": {
-          "name": "Conditions if / elif / else",
-          "definition": "Conditional structures allow the program to make decisions. Code is executed only if the condition is True. If the first condition is false, the elif block is checked, and if nothing matches, the else block triggers.",
-          "dynamic_info": "In Python, indentation (4 spaces) is not just a style choice, but a syntax requirement. Without them, the code won't understand what belongs to the condition.",
-          "types_list": [
-            {
-              "t": "if",
-              "n": "If",
-              "ex": "if x > 0:",
-              "desc": "Basic condition check."
-            },
-            {
-              "t": "elif",
-              "n": "Else if",
-              "ex": "elif x == 0:",
-              "desc": "Additional check if the first condition fails."
-            },
-            {
-              "t": "else",
-              "n": "Else",
-              "ex": "else:",
-              "desc": "Triggers in all other cases."
-            }
-          ],
-          "slides": [
-            {
-              "id": 1,
-              "img": "/img/if_1.webp",
-              "title": "Branching Logic",
-              "text": "The program chooses only one execution path from the proposed ones."
-            },
-            {
-              "id": 2,
-              "img": "/img/if_2.webp",
-              "title": "Nesting",
-              "text": "You can put an if inside another if, but don't do it too often."
-            },
-            {
-              "id": 3,
-              "img": "/img/if_3.webp",
-              "title": "Pass",
-              "text": "Use pass if a condition is needed, but you haven't decided what to write there yet."
-            }
-          ],
-          "pro_tip": "Try to place the most likely condition first in the chain — this slightly speeds up the code.",
-          "warning": "Don't forget to put a colon (:) at the end of every line with if, elif, and else!"
-        },
-        "operators": {
-          "name": "Logical Operators",
-          "definition": "The and, or, and not operators allow you to combine multiple conditions into one. This makes the program logic more flexible and complex.",
-          "dynamic_info": "Python uses 'lazy evaluation': in 'A and B', if A is false, B won't even be checked.",
-          "types_list": [
-            {
-              "t": "and",
-              "n": "Logical AND",
-              "ex": "if x > 0 and y > 0:",
-              "desc": "True only when BOTH conditions are correct."
-            },
-            {
-              "t": "or",
-              "n": "Logical OR",
-              "ex": "if x > 0 or y > 0:",
-              "desc": "True if at least ONE condition is correct."
-            },
-            {
-              "t": "not",
-              "n": "Logical NOT",
-              "ex": "if not x:",
-              "desc": "Inverts the result (turns True into False)."
-            }
-          ],
-          "slides": [
-            {
-              "id": 1,
-              "img": "/img/ops_1.webp",
-              "title": "Priorities",
-              "text": "First not is executed, then and, and finally or."
-            },
-            {
-              "id": 2,
-              "img": "/img/ops_2.webp",
-              "title": "Brackets",
-              "text": "Use brackets () to explicitly specify the order of condition checks."
-            },
-            {
-              "id": 3,
-              "img": "/img/ops_3.webp",
-              "title": "Shortcuts",
-              "text": "In Python, you can write 0 < x < 10 instead of (x > 0 and x < 10)."
-            }
-          ],
-          "pro_tip": "and is like multiplication, or is like addition. This helps in remembering priorities.",
-          "warning": "Don't confuse 'and' with '&' — these are different operators (logical and bitwise)."
-        },
-        "loops": {
-          "name": "Loops for and while",
-          "definition": "Loops are needed for repeating actions. While works as long as the condition is true. For iterates over elements in a list or a range of numbers.",
-          "dynamic_info": "The for loop in Python is an iterator; it's very efficient when working with data collections.",
-          "types_list": [
-            {
-              "t": "while",
-              "n": "While",
-              "ex": "while x < 5:",
-              "desc": "Repeats as long as the condition is true."
-            },
-            {
-              "t": "for",
-              "n": "For each",
-              "ex": "for i in range(5):",
-              "desc": "Iterates through the elements of a sequence."
-            },
-            {
-              "t": "break / continue",
-              "n": "Control",
-              "ex": "break",
-              "desc": "break — exit the loop, continue — skip to the next iteration."
-            }
-          ],
-          "slides": [
-            {
-              "id": 1,
-              "img": "/img/loops_1.webp",
-              "title": "Range",
-              "text": "range(5) will create numbers from 0 to 4. The last number is not included!"
-            },
-            {
-              "id": 2,
-              "img": "/img/loops_2.webp",
-              "title": "Infinite Loop",
-              "text": "If the while condition is always True, the program will never stop."
-            },
-            {
-              "id": 3,
-              "img": "/img/loops_3.webp",
-              "title": "Else in Loop",
-              "text": "The else block after a loop will trigger if the loop finished without using break."
-            }
-          ],
-          "pro_tip": "Use for when you know the number of repetitions, and while when you don't.",
-          "warning": "Make sure the value changes inside while, otherwise you'll get a program 'hang'."
-        
+      "conditions": {
+        "name": "Conditions if / elif / else",
+        "definition": "Conditional structures allow the program to make decisions. Code is executed only if the condition is True. If the first condition is false, the elif block is checked, and if nothing matches, the else block triggers.",
+        "dynamic_info": "In Python, indentation (4 spaces) is not just a style choice, but a syntax requirement. Without them, the code won't understand what belongs to the condition.",
+        "types_list": [
+          {
+            "t": "if",
+            "n": "If",
+            "ex": "if x > 0:",
+            "desc": "Basic condition check."
+          },
+          {
+            "t": "elif",
+            "n": "Else if",
+            "ex": "elif x == 0:",
+            "desc": "Additional check if the first condition fails."
+          },
+          {
+            "t": "else",
+            "n": "Else",
+            "ex": "else:",
+            "desc": "Triggers in all other cases."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/if_1.webp",
+            "title": "Branching Logic",
+            "text": "The program chooses only one execution path from the proposed ones."
+          },
+          {
+            "id": 2,
+            "img": "/img/if_2.webp",
+            "title": "Nesting",
+            "text": "You can put an if inside another if, but don't do it too often."
+          },
+          {
+            "id": 3,
+            "img": "/img/if_3.webp",
+            "title": "Pass",
+            "text": "Use pass if a condition is needed, but you haven't decided what to write there yet."
+          }
+        ],
+        "pro_tip": "Try to place the most likely condition first in the chain — this slightly speeds up the code.",
+        "warning": "Don't forget to put a colon (:) at the end of every line with if, elif, and else!"
+      },
+      "operators": {
+        "name": "Logical Operators",
+        "definition": "The and, or, and not operators allow you to combine multiple conditions into one. This makes the program logic more flexible and complex.",
+        "dynamic_info": "Python uses 'lazy evaluation': in 'A and B', if A is false, B won't even be checked.",
+        "types_list": [
+          {
+            "t": "and",
+            "n": "Logical AND",
+            "ex": "if x > 0 and y > 0:",
+            "desc": "True only when BOTH conditions are correct."
+          },
+          {
+            "t": "or",
+            "n": "Logical OR",
+            "ex": "if x > 0 or y > 0:",
+            "desc": "True if at least ONE condition is correct."
+          },
+          {
+            "t": "not",
+            "n": "Logical NOT",
+            "ex": "if not x:",
+            "desc": "Inverts the result (turns True into False)."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/ops_1.webp",
+            "title": "Priorities",
+            "text": "First not is executed, then and, and finally or."
+          },
+          {
+            "id": 2,
+            "img": "/img/ops_2.webp",
+            "title": "Brackets",
+            "text": "Use brackets () to explicitly specify the order of condition checks."
+          },
+          {
+            "id": 3,
+            "img": "/img/ops_3.webp",
+            "title": "Shortcuts",
+            "text": "In Python, you can write 0 < x < 10 instead of (x > 0 and x < 10)."
+          }
+        ],
+        "pro_tip": "and is like multiplication, or is like addition. This helps in remembering priorities.",
+        "warning": "Don't confuse 'and' with '&' — these are different operators (logical and bitwise).",
+        "video_id": "пусто"
+      },
+      "loops": {
+        "name": "Loops for and while",
+        "definition": "Loops are needed for repeating actions. While works as long as the condition is true. For iterates over elements in a list or a range of numbers.",
+        "dynamic_info": "The for loop in Python is an iterator; it's very efficient when working with data collections.",
+        "types_list": [
+          {
+            "t": "while",
+            "n": "While",
+            "ex": "while x < 5:",
+            "desc": "Repeats as long as the condition is true."
+          },
+          {
+            "t": "for",
+            "n": "For each",
+            "ex": "for i in range(5):",
+            "desc": "Iterates through the elements of a sequence."
+          },
+          {
+            "t": "break / continue",
+            "n": "Control",
+            "ex": "break",
+            "desc": "break — exit the loop, continue — skip to the next iteration."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/loops_1.webp",
+            "title": "Range",
+            "text": "range(5) will create numbers from 0 to 4. The last number is not included!"
+          },
+          {
+            "id": 2,
+            "img": "/img/loops_2.webp",
+            "title": "Infinite Loop",
+            "text": "If the while condition is always True, the program will never stop."
+          },
+          {
+            "id": 3,
+            "img": "/img/loops_3.webp",
+            "title": "Else in Loop",
+            "text": "The else block after a loop will trigger if the loop finished without using break."
+          }
+        ],
+        "pro_tip": "Use for when you know the number of repetitions, and while when you don't.",
+        "warning": "Make sure the value changes inside while, otherwise you'll get a program 'hang'.",
+        "video_id": "пусто"
       }
     }
   }

@@ -12,6 +12,20 @@
     },
     "themes": [
       {
+        "id": "theme_0",
+        "name": "0. Tayyorgarlik: O'rnatish",
+        "subthemes": [
+          {
+            "id": "install_python",
+            "name": "Python-ni kompyuterga o'rnatish"
+          },
+          {
+            "id": "pycharm_setup",
+            "name": "Muhitni sozlash (PyCharm)"
+          }
+        ]
+      },
+      {
         "id": "theme_1",
         "name": "Asoslar: O'zgaruvchilar",
         "subthemes": [
@@ -49,6 +63,78 @@
       }
     ],
     "content": {
+      "install_python": {
+        "name": "Python-ni o'rnatish",
+        "definition": "Kompyuter Python tilini tushunishi uchun maxsus dastur — interpretatorni o'rnatish kerak. U kodingizni protsessor tushunadigan buyruqlarga o'giradi. Uni faqat python.org rasmiy saytidan yuklab olish lozim.",
+        "dynamic_info": "Windows uchun hozirda 3.12+ versiyalari dolzarb. macOS yoki Linux-da Python ko'pincha o'rnatilgan bo'ladi, lekin uni yangilash tavsiya etiladi.",
+        "types_list": [
+          {
+            "t": "Windows",
+            "n": "Win-da o'rnatish",
+            "ex": "Add Python to PATH",
+            "desc": "O'rnatish vaqtida 'Add Python to PATH' katakchasini BELGILASH shart, aks holda buyruqlar terminalda ishlamaydi."
+          },
+          {
+            "t": "macOS",
+            "n": "Mac-da o'rnatish",
+            "ex": "brew install python",
+            "desc": "Homebrew paket menejeri orqali yoki saytdan .pkg faylini yuklab olib o'rnatish eng yaxshi yo'ldir."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "public/img/pychrm&python/python.png",
+            "title": "Rasmiy sayt",
+            "text": "python.org saytining Downloads bo'limiga kiring. Sayt operatsion tizimingizni avtomatik aniqlaydi."
+          }
+        ],
+        "pro_tip": "Python-ni Microsoft Store-dan yuklamang — rasmiy saytdan o'rnatish ishonchliroq.",
+        "warning": "Mac/Linux-dagi tizimli Python-ni hech qachon o'chirib tashlamang — bu tizim ishiga zarar yetkazishi mumkin!",
+        "video_id": "CfqX2_xY8VQ?list=PLDyJYA6aTY1lPWXBPk0gw6gR8fEtPDGKa&t=35"
+      },
+      "pycharm_setup": {
+        "name": "PyCharm-ni sozlash",
+        "definition": "PyCharm — bu kuchli dasturlash muhiti (IDE). U xatolarni darhol tekshiradi, kodni tezroq yozishga yordam beradi. Biz bepul Community Edition versiyasidan foydalanamiz.",
+        "dynamic_info": "PyCharm loyihalar kutubxonalari bir-biri bilan to'qnashmasligi uchun avtomatik ravishda virtual muhit (venv) yaratadi.",
+        "types_list": [
+          {
+            "t": "Community",
+            "n": "PyCharm Community",
+            "ex": "Bepul versiya",
+            "desc": "O'rganish va Python-da dasturlar yaratish uchun mo'ljallangan bepul versiya."
+          },
+          {
+            "t": "venv",
+            "n": "Virtual muhit",
+            "ex": "venv",
+            "desc": "Loyiha ichidagi kutubxonalar va interpretator saqlanadigan alohida papka."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/pychrm&python/pycharm.png",
+            "title": "Yuklab olish",
+            "text": "jetbrains.com saytidan 'Community Edition' versiyasini yuklab oling."
+          },
+          {
+            "id": 2,
+            "img": "/img/pychrm&python/pycharm1.png",
+            "title": "Yangi loyiha",
+            "text": "'New Project' tugmasini bosing va 'New Virtualenv environment' tanlanganiga ishonch hosil qiling."
+          },
+          {
+            "id": 3,
+            "img": "/img/pychrm&python/pycharm2.png",
+            "title": "Kodish ishga tushirish",
+            "text": "Fayl ustiga o'ng tugmani bosing va dasturni yurgizish uchun 'Run' buyrug'ini tanlang."
+          }
+        ],
+        "pro_tip": "PyCharm-da istalgan sozlama yoki faylni topish uchun Shift tugmasini ikki marta bosing (Double Shift).",
+        "warning": "Agar kod ishlamasa, loyiha sozlamalaridan 'Python Interpreter' to'g'ri tanlanganini tekshiring.",
+        "video_id": "пусто"
+      },
       "vars": {
         "name": "O'zgaruvchilar va ma'lumot turlari",
         "definition": "O'zgaruvchi — bu ma'lumotlarni saqlash uchun 'konteyner'. Uni ustiga yorliq yopishtirilgan quti deb tasavvur qiling. Yorliq — o'zgaruvchining nomi, ichidagi narsa esa uning qiymati. Python dinamik tiplashtirish tufayli qutiga nima solganingizni o'zi tushunadi.",
@@ -94,7 +180,8 @@
           }
         ],
         "pro_tip": "O'zgaruvchilarga tushunarli nom bering, toki bir oydan keyin ham u yerda nima borligini tushunasiz ('a' emas, 'user_balance').",
-        "warning": "Python harflar registriga sezgir! 'Age' va 'age' — bular ikkita turli quti."
+        "warning": "Python harflar registriga sezgir! 'Age' va 'age' — bular ikkita turli quti.",
+        "video_id": "пусто"
       },
       "io_basics": {
         "name": "Muloqot: print() va input()",
@@ -135,7 +222,8 @@
           }
         ],
         "pro_tip": "Agar konsolda bo'sh qator tashlamoqchi bo'lsangiz, argumentlarsiz bo'sh print() qo'shing.",
-        "warning": "Unutmang, input() funksiyasidan keyin dastur siz ma'lumot kiritmaguningizcha 'muzlab' qoladi."
+        "warning": "Unutmang, input() funksiyasidan keyin dastur siz ma'lumot kiritmaguningizcha 'muzlab' qoladi.",
+        "video_id": "пусто"
       },
       "syntax_basics": {
         "name": "Izohlar va Turlarni o'zgartirish",
@@ -182,7 +270,8 @@
           }
         ],
         "pro_tip": "Izohlarni shunday yozingki, sizdan keyin kodni o'qiydigan odam sizning manzilingizni biladigan jahldor inson bo'lmasin.",
-        "warning": "'Salom' matnini int() orqali songa aylantirish xatoga olib keladi, chunki so'z ichida raqamlar yo'q."
+        "warning": "'Salom' matnini int() orqali songa aylantirish xatoga olib keladi, chunki so'z ichida raqamlar yo'q.",
+        "video_id": "пусто"
       },
       "conditions": {
         "name": "if / elif / else shartlari",
@@ -229,7 +318,8 @@
           }
         ],
         "pro_tip": "Zanjirda eng ehtimolli shartni birinchi bo'lib qo'yishga harakat qiling — bu kodni biroz tezlashtiradi.",
-        "warning": "if, elif va else bilan tugaydigan har bir qator oxiriga ikki nuqta (:) qo'yishni unutmang!"
+        "warning": "if, elif va else bilan tugaydigan har bir qator oxiriga ikki nuqta (:) qo'yishni unutmang!",
+        "video_id": "пусто"
       },
       "operators": {
         "name": "Mantiqiy operatorlar",
@@ -276,7 +366,8 @@
           }
         ],
         "pro_tip": "and — ko'paytirishga, or — qo'shishga o'xshaydi. Bu ustuvorliklarni eslab qolishga yordam beradi.",
-        "warning": "'and'ni '&' bilan aralashtirib yubormang — bular har xil operatorlar (mantiqiy va bitli)."
+        "warning": "'and'ni '&' bilan aralashtirib yubormang — bular har xil operatorlar (mantiqiy va bitli).",
+        "video_id": "пусто"
       },
       "loops": {
         "name": "for va while sikllari",
@@ -323,7 +414,8 @@
           }
         ],
         "pro_tip": "Takrorlanishlar sonini bilsangiz for, bilmasangiz while-dan foydalaning.",
-        "warning": "while ichida qiymat o'zgarayotganiga ishonch hosil qiling, aks holda dastur 'osilib' qoladi."
+        "warning": "while ichida qiymat o'zgarayotganiga ishonch hosil qiling, aks holda dastur 'osilib' qoladi.",
+        "video_id": "пусто"
       }
     }
   }
