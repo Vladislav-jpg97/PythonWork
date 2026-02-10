@@ -27,7 +27,7 @@
       },
       {
         "id": "theme_1",
-        "name": "Asoslar: O'zgaruvchilar",
+        "name": "1. Asoslar: O'zgaruvchilar",
         "subthemes": [
           {
             "id": "vars",
@@ -91,7 +91,7 @@
         ],
         "pro_tip": "Python-ni Microsoft Store-dan yuklamang — rasmiy saytdan o'rnatish ishonchliroq.",
         "warning": "Mac/Linux-dagi tizimli Python-ni hech qachon o'chirib tashlamang — bu tizim ishiga zarar yetkazishi mumkin!",
-        "video_id": "CfqX2_xY8VQ?list=PLDyJYA6aTY1lPWXBPk0gw6gR8fEtPDGKa&t=35"
+        "video_id": "BVJwyk4GHWY?list=PLm59fx936jzon2ZQ5FST6f2ck1m115hdi&t=81"
       },
       "pycharm_setup": {
         "name": "PyCharm-ni sozlash",
@@ -133,55 +133,85 @@
         ],
         "pro_tip": "PyCharm-da istalgan sozlama yoki faylni topish uchun Shift tugmasini ikki marta bosing (Double Shift).",
         "warning": "Agar kod ishlamasa, loyiha sozlamalaridan 'Python Interpreter' to'g'ri tanlanganini tekshiring.",
-        "video_id": "пусто"
+        "video_id": "BVJwyk4GHWY?list=PLm59fx936jzon2ZQ5FST6f2ck1m115hdi&t=81"
       },
       "vars": {
-        "name": "O'zgaruvchilar va ma'lumot turlari",
-        "definition": "O'zgaruvchi — bu ma'lumotlarni saqlash uchun 'konteyner'. Uni ustiga yorliq yopishtirilgan quti deb tasavvur qiling. Yorliq — o'zgaruvchining nomi, ichidagi narsa esa uning qiymati. Python dinamik tiplashtirish tufayli qutiga nima solganingizni o'zi tushunadi.",
-        "dynamic_info": "Python-da o'zgaruvchi turini oldindan aytish shart emas. Agar x = 10 deb yozsangiz, u avtomatik Integer bo'ladi.",
+        "name": "O‘zgaruvchilar va ma’lumot turlari",
+        "definition": "O‘zgaruvchi — bu kompyuter xotirasida qiymat saqlanadigan joy. Uni nomi bor quti deb tasavvur qilish mumkin. Qutining nomi — o‘zgaruvchi nomi, ichidagi esa uning qiymati. Python dasturlarida ma’lumotlarni saqlash uchun ishlatiladi.",
+        "dynamic_info": "Python dinamik tipizatsiyaga ega. Bu degani, o‘zgaruvchi turini oldindan yozish shart emas. x = 5 deb yozsang, Python bu son ekanini o‘zi tushunadi. Keyin x = 'salom' yozilsa, u matnga aylanadi.",
         "types_list": [
           {
             "t": "int",
-            "n": "Butun son (Integer)",
-            "ex": "apples = 5",
-            "desc": "Har qanday butun sonlar: musbat, manfiy yoki nol. Buyumlarni sanashda ishlatiladi."
+            "n": "Butun son",
+            "ex": "age = 10",
+            "desc": "Butun sonlar sanash uchun ishlatiladi."
           },
           {
             "t": "float",
-            "n": "Kasr son (Float)",
-            "ex": "pi = 3.14",
-            "desc": "Nuqtali kasr sonlar. Muhim: dasturlashda kasr qismi vergul bilan emas, nuqta bilan ajratiladi."
+            "n": "Kasr son",
+            "ex": "price = 9.99",
+            "desc": "Kasr sonlar aniqlik kerak bo‘lganda ishlatiladi."
           },
           {
             "t": "str",
-            "n": "Satr (String)",
-            "ex": "greeting = 'Salom!'",
-            "desc": "Har qanday matn. Python matnni buyruqlar bilan adashtirib yubormasligi uchun uni har doim qo'shtirnoqqa olamiz."
+            "n": "Matn",
+            "ex": "name = \"Alex\"",
+            "desc": "Matnlar qo‘shtirnoq ichida yoziladi."
+          },
+          {
+            "t": "bool",
+            "n": "Mantiqiy",
+            "ex": "is_active = True",
+            "desc": "Faqat True yoki False bo‘ladi."
+          },
+          {
+            "t": "list",
+            "n": "Ro‘yxat",
+            "ex": "numbers = [1, 2, 3]",
+            "desc": "Bir nechta qiymatlarni saqlaydi."
+          },
+          {
+            "t": "tuple",
+            "n": "Kortej",
+            "ex": "colors = (\"red\", \"blue\")",
+            "desc": "O‘zgartirib bo‘lmaydigan ro‘yxat."
+          },
+          {
+            "t": "dict",
+            "n": "Lug‘at",
+            "ex": "user = {\"name\": \"Alex\", \"age\": 10}",
+            "desc": "Kalit va qiymatlar orqali ishlaydi."
+          },
+          {
+            "t": "set",
+            "n": "To‘plam",
+            "ex": "unique = {1, 2, 3}",
+            "desc": "Takrorlanmas qiymatlar saqlanadi."
           }
         ],
         "slides": [
           {
             "id": 1,
             "img": "/img/vars_1.webp",
-            "title": "O'zgaruvchi yaratish",
-            "text": "Nomini yozamiz, barobar belgisini (o'zlashtirish) qo'yamiz va qiymatni yozamiz."
+            "title": "O‘zgaruvchi nima",
+            "text": "Qiymat saqlanadigan nomli quti."
           },
           {
             "id": 2,
             "img": "/img/vars_2.webp",
-            "title": "Sonlar vs Satrlar",
-            "text": "5 raqami — bu hisob-kitob uchun son. Tirnoq ichidagi '5' — bu shunchaki belgi, u bilan hisoblab bo'lmaydi."
+            "title": "Son va matn",
+            "text": "5 — son, '5' — matn."
           },
           {
             "id": 3,
             "img": "/img/vars_3.webp",
-            "title": "O'zgaruvchi nomlari",
-            "text": "Faqat lotin alifbosi va pastki chiziqdan foydalaning. Uslub: mening_ozgaruvchim."
+            "title": "Nomlash",
+            "text": "O‘zgaruvchi nomlari tushunarli bo‘lsin."
           }
         ],
-        "pro_tip": "O'zgaruvchilarga tushunarli nom bering, toki bir oydan keyin ham u yerda nima borligini tushunasiz ('a' emas, 'user_balance').",
-        "warning": "Python harflar registriga sezgir! 'Age' va 'age' — bular ikkita turli quti.",
-        "video_id": "пусто"
+        "pro_tip": "Yaxshi nomlangan o‘zgaruvchi kodni tushunishni osonlashtiradi.",
+        "warning": "Python katta va kichik harflarni farqlaydi.",
+        "video_id": "Wnm8Bk4_lBY?t=242"
       },
       "io_basics": {
         "name": "Muloqot: print() va input()",
@@ -223,7 +253,7 @@
         ],
         "pro_tip": "Agar konsolda bo'sh qator tashlamoqchi bo'lsangiz, argumentlarsiz bo'sh print() qo'shing.",
         "warning": "Unutmang, input() funksiyasidan keyin dastur siz ma'lumot kiritmaguningizcha 'muzlab' qoladi.",
-        "video_id": "пусто"
+        "video_id": "8hzpSR_Qaj8?list=PLA0M1Bcd0w8yWHh2V70bTtbVxJICrnJHd"
       },
       "syntax_basics": {
         "name": "Izohlar va Turlarni o'zgartirish",
@@ -271,7 +301,7 @@
         ],
         "pro_tip": "Izohlarni shunday yozingki, sizdan keyin kodni o'qiydigan odam sizning manzilingizni biladigan jahldor inson bo'lmasin.",
         "warning": "'Salom' matnini int() orqali songa aylantirish xatoga olib keladi, chunki so'z ichida raqamlar yo'q.",
-        "video_id": "пусто"
+        "video_id": "EFETI6mejQQ"
       },
       "conditions": {
         "name": "if / elif / else shartlari",

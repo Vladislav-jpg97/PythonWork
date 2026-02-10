@@ -41,7 +41,7 @@ declare const messages: {
             },
             {
                 "id": "theme_1",
-                "name": "Основы: Переменные",
+                "name": "1. Основы: Переменные",
                 "subthemes": [
                     {
                         "id": "vars",
