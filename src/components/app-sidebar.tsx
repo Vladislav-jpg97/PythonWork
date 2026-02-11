@@ -19,20 +19,38 @@ import {
   SidebarMenuSubButton,
   SidebarHeader,
   SidebarRail,
+  useSidebar, // Импортируем хук управления сайтбаром
 } from "@/components/ui/sidebar"
 
-interface Theme { id: string; name: string; subthemes: { id: string; name: string }[]; }
+interface Theme { 
+  id: string; 
+  name: string; 
+  subthemes: { id: string; name: string }[]; 
+}
 
 export function AppSidebar() {
   const t = useTranslations("PythonThemes")
   const locale = useLocale()
   const pathname = usePathname()
+  
+  // Извлекаем функцию закрытия мобильного меню
+  const { setOpenMobile } = useSidebar()
+  
   const themes = t.raw("themes") as Theme[] || []
+
+  // Функция для закрытия сайтбара
+  const handleLinkClick = () => {
+    setOpenMobile(false)
+  }
 
   return (
     <Sidebar variant="sidebar" collapsible="offcanvas" className="bg-[#0b0e14]">
       <SidebarHeader className="p-6">
-        <Link href={`/${locale}`} className="flex items-center gap-3 group">
+        <Link 
+          href={`/${locale}`} 
+          className="flex items-center gap-3 group"
+          onClick={handleLinkClick} // Закрыть при клике на лого
+        >
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] group-hover:scale-110 transition-transform">
             <Code2 size={24} />
           </div>
@@ -68,7 +86,11 @@ export function AppSidebar() {
                           return (
                             <SidebarMenuItem key={sub.id}>
                               <SidebarMenuSubButton asChild isActive={isActive}>
-                                <Link href={href} className={cn("flex items-center gap-3 w-full", isActive ? "text-blue-400" : "text-slate-500")}>
+                                <Link 
+                                  href={href} 
+                                  className={cn("flex items-center gap-3 w-full", isActive ? "text-blue-400" : "text-slate-500")}
+                                  onClick={handleLinkClick} // ЗАКРЫВАЕТ САЙТБАР ТУТ
+                                >
                                   <Terminal size={12} className={isActive ? "text-blue-400" : "opacity-20"} />
                                   <span className="text-xs truncate">{sub.name}</span>
                                 </Link>
