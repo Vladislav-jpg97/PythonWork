@@ -13,7 +13,7 @@
     "themes": [
       {
         "id": "theme_0",
-        "name": "0. Preparation: Installation",
+        "name": "Preparation: Installation",
         "subthemes": [
           {
             "id": "install_python",
@@ -27,7 +27,7 @@
       },
       {
         "id": "theme_1",
-        "name": "1. Basics: Variables",
+        "name": "Basics: Variables",
         "subthemes": [
           {
             "id": "vars",
@@ -44,8 +44,26 @@
         ]
       },
       {
+        "id": "theme_strings",
+        "name": "Strings (str)",
+        "subthemes": [
+          {
+            "id": "strings_basics",
+            "name": "What is a string"
+          },
+          {
+            "id": "strings_index",
+            "name": "Indexes and slices"
+          },
+          {
+            "id": "strings_methods",
+            "name": "String methods"
+          }
+        ]
+      },
+      {
         "id": "theme_2",
-        "name": "2. Control Flow",
+        "name": "Control Flow",
         "subthemes": [
           {
             "id": "conditions",
@@ -192,21 +210,9 @@
         "slides": [
           {
             "id": 1,
-            "img": "/img/vars_1.webp",
+            "img": "https://skillbox.ru/upload/setka_images/14234204082022_5c20dcbcfbab07ab6c2df7e27444d5ac2afca569.png",
             "title": "What is a variable",
             "text": "A variable is a named box that stores a value."
-          },
-          {
-            "id": 2,
-            "img": "/img/vars_2.webp",
-            "title": "Number vs Text",
-            "text": "5 is a number, '5' is text. They behave differently."
-          },
-          {
-            "id": 3,
-            "img": "/img/vars_3.webp",
-            "title": "Variable names",
-            "text": "Use clear names written in English letters."
           }
         ],
         "pro_tip": "Good variable names make code easy to understand.",
@@ -234,21 +240,9 @@
         "slides": [
           {
             "id": 1,
-            "img": "/img/io_1.webp",
+            "img": "/img/print-input/printinput.jpg",
             "title": "Print Function",
             "text": "You can output multiple values separated by commas: print('Score:', score)."
-          },
-          {
-            "id": 2,
-            "img": "/img/io_2.webp",
-            "title": "Input Prompt",
-            "text": "Inside input, you can write a hint: input('What is your name? ')."
-          },
-          {
-            "id": 3,
-            "img": "/img/io_3.webp",
-            "title": "f-strings",
-            "text": "The most convenient output: print(f'Hello, {name}!') will insert the variable's value directly into the text."
           }
         ],
         "pro_tip": "Add an empty print() without arguments if you want to create an empty line break in the console.",
@@ -282,21 +276,9 @@
         "slides": [
           {
             "id": 1,
-            "img": "/img/syntax_1.webp",
+            "img": "https://skillbox.ru/upload/setka_images/14234204082022_5c20dcbcfbab07ab6c2df7e27444d5ac2afca569.png",
             "title": "Why Comments are Needed",
             "text": "They help you and your colleagues understand the code after some time has passed."
-          },
-          {
-            "id": 2,
-            "img": "/img/syntax_2.webp",
-            "title": "Type Error",
-            "text": "If you try to add a number and text '5' + 5, Python will raise a TypeError."
-          },
-          {
-            "id": 3,
-            "img": "/img/syntax_3.webp",
-            "title": "Correct Addition",
-            "text": "First convert the text to a number: int('5') + 5. Now the result will be 10."
           }
         ],
         "pro_tip": "Write comments as if the person reading your code is a violent psychopath who knows where you live.",
@@ -444,6 +426,396 @@
         ],
         "pro_tip": "Use for when you know the number of repetitions, and while when you don't.",
         "warning": "Make sure the value changes inside while, otherwise you'll get a program 'hang'.",
+        "video_id": "пусто"
+      },
+      "strings_basics": {
+        "name": "Strings in Python",
+        "definition": "A string is a data type called str that is used to store text. Text includes letters, words, numbers as text, spaces and special symbols. In Python, strings must be written inside single or double quotes.",
+        "dynamic_info": "Strings in Python are immutable. This means you cannot change a character inside a string after it is created. Any change creates a new string.",
+        "types_list": [
+          {
+            "t": "str",
+            "n": "Create string",
+            "ex": "text = 'Hello'",
+            "desc": "Creates a string and stores it in a variable."
+          },
+          {
+            "t": "len()",
+            "n": "String length",
+            "ex": "len('Python')",
+            "desc": "Returns the number of characters in a string."
+          },
+          {
+            "t": "+",
+            "n": "Concatenation",
+            "ex": "'Py' + 'thon'",
+            "desc": "Joins two strings into one."
+          },
+          {
+            "t": "*",
+            "n": "Repeat string",
+            "ex": "'ha' * 3",
+            "desc": "Repeats the string multiple times."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/str1.webp",
+            "title": "String",
+            "text": "Any text inside quotes is a string."
+          }
+        ],
+        "pro_tip": "Use f-strings for easy text formatting.",
+        "warning": "You cannot change a character directly inside a string.",
+        "video_id": "пусто"
+      },
+      "strings_index": {
+        "name": "Indexes and slices",
+        "definition": "Each character in a string has an index. Indexes start from 0. Slices allow you to get a part of a string.",
+        "dynamic_info": "Negative indexes are allowed. Index -1 means the last character.",
+        "types_list": [
+          {
+            "t": "[i]",
+            "n": "Index",
+            "ex": "word[0]",
+            "desc": "Returns the character at the given index."
+          },
+          {
+            "t": "[start:end]",
+            "n": "Slice",
+            "ex": "word[1:4]",
+            "desc": "Returns part of the string."
+          },
+          {
+            "t": "[:end]",
+            "n": "From start",
+            "ex": "word[:3]",
+            "desc": "Takes characters from the beginning."
+          },
+          {
+            "t": "[start:]",
+            "n": "To end",
+            "ex": "word[2:]",
+            "desc": "Takes characters to the end of the string."
+          },
+          {
+            "t": "[::step]",
+            "n": "Step slice",
+            "ex": "word[::2]",
+            "desc": "Takes characters with a step."
+          },
+          {
+            "t": "[::-1]",
+            "n": "Reverse",
+            "ex": "word[::-1]",
+            "desc": "Reverses the string."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/index.webp",
+            "title": "Indexes",
+            "text": "The first character has index 0."
+          }
+        ],
+        "pro_tip": "Slices are a very powerful feature in Python.",
+        "warning": "Accessing a non-existing index causes an error.",
+        "video_id": "пусто"
+      },
+      "strings_methods": {
+        "name": "String methods",
+        "definition": "String methods are built-in functions used to work with text. They are called using a dot.",
+        "dynamic_info": "All string methods return a new string and do not change the original one.",
+        "types_list": [
+          {
+            "t": ".upper()",
+            "n": "Uppercase",
+            "ex": "'hi'.upper()",
+            "desc": "Converts all letters to uppercase."
+          },
+          {
+            "t": ".lower()",
+            "n": "Lowercase",
+            "ex": "'HI'.lower()",
+            "desc": "Converts all letters to lowercase."
+          },
+          {
+            "t": ".capitalize()",
+            "n": "Capitalize",
+            "ex": "'python'.capitalize()",
+            "desc": "Makes the first letter uppercase."
+          },
+          {
+            "t": ".strip()",
+            "n": "Remove spaces",
+            "ex": "' hi '.strip()",
+            "desc": "Removes spaces at the beginning and end."
+          },
+          {
+            "t": ".replace()",
+            "n": "Replace",
+            "ex": "'hi'.replace('h','H')",
+            "desc": "Replaces part of a string."
+          },
+          {
+            "t": ".split()",
+            "n": "Split",
+            "ex": "'a b c'.split()",
+            "desc": "Splits a string into a list."
+          },
+          {
+            "t": ".join()",
+            "n": "Join",
+            "ex": "'-'.join(['a','b'])",
+            "desc": "Joins a list into a string."
+          },
+          {
+            "t": ".find()",
+            "n": "Find",
+            "ex": "'hello'.find('e')",
+            "desc": "Finds the index of a character."
+          },
+          {
+            "t": ".count()",
+            "n": "Count",
+            "ex": "'hello'.count('l')",
+            "desc": "Counts occurrences of a character."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/methods.webp",
+            "title": "Methods",
+            "text": "Methods are called using dot notation."
+          }
+        ],
+        "pro_tip": "You can chain methods together.",
+        "warning": "Always use parentheses () when calling methods.",
+        "video_id": "пусто"
+      },
+      "strings_basics": {
+        "name": "Strings in Python",
+        "definition": "A string is a data type called str that is used to store text. Text means everything: words, sentences, numbers written as text, spaces, and special characters. For example: a person's name, a user message, a password, or a file path. In Python, strings must always be written inside single or double quotes.",
+        "dynamic_info": "It is very important to remember: strings in Python are immutable. This means that after a string is created, you cannot change a single character inside it. Any “change” actually creates a new string.",
+        "types_list": [
+          {
+            "t": "str",
+            "n": "Creating a string",
+            "ex": "text = 'Hello'",
+            "desc": "Creates a string and stores it in a variable. The text must be inside quotes."
+          },
+          {
+            "t": "len()",
+            "n": "String length",
+            "ex": "len('Python')",
+            "desc": "Returns the number of characters in the string. Letters, digits, spaces, and symbols are all counted."
+          },
+          {
+            "t": "+",
+            "n": "Concatenation",
+            "ex": "'Py' + 'thon'",
+            "desc": "Combines two strings into one new string."
+          },
+          {
+            "t": "*",
+            "n": "String repetition",
+            "ex": "'ha' * 3",
+            "desc": "Repeats the string a specified number of times."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/str1.webp",
+            "title": "What is a string",
+            "text": "Any text inside quotes in Python is a string."
+          }
+        ],
+        "pro_tip": "Use f-strings to conveniently insert variables into text.",
+        "warning": "Trying to change a string character directly will cause an error.",
+        "video_id": "пусто"
+      },
+      "strings_index": {
+        "name": "String indexes and slices",
+        "definition": "Each character in a string has its own number called an index. Indexing starts from 0. This means the first character has index 0, the second has index 1, and so on. Slices allow you to get a part of a string.",
+        "dynamic_info": "Python supports negative indexes. Index -1 refers to the last character of the string, -2 to the one before it.",
+        "types_list": [
+          {
+            "t": "[i]",
+            "n": "Index",
+            "ex": "word[0]",
+            "desc": "Returns a single character by its index."
+          },
+          {
+            "t": "[start:end]",
+            "n": "Basic slice",
+            "ex": "word[1:4]",
+            "desc": "Returns a part of the string from start to end, excluding end."
+          },
+          {
+            "t": "[:end]",
+            "n": "Slice from start",
+            "ex": "word[:3]",
+            "desc": "Takes characters from the beginning up to the given index."
+          },
+          {
+            "t": "[start:]",
+            "n": "Slice to end",
+            "ex": "word[2:]",
+            "desc": "Takes characters from the given index to the end of the string."
+          },
+          {
+            "t": "[:]",
+            "n": "Full slice",
+            "ex": "word[:]",
+            "desc": "Creates a copy of the entire string."
+          },
+          {
+            "t": "[start:end:step]",
+            "n": "Slice with step",
+            "ex": "word[::2]",
+            "desc": "Takes characters using the specified step."
+          },
+          {
+            "t": "[::-1]",
+            "n": "Reverse string",
+            "ex": "word[::-1]",
+            "desc": "Completely reverses the string."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/index.webp",
+            "title": "Indexes",
+            "text": "The first character always has index 0."
+          }
+        ],
+        "pro_tip": "Slices are one of the most powerful tools for working with strings.",
+        "warning": "Accessing a non-existing index raises an IndexError.",
+        "video_id": "пусто"
+      },
+      "strings_methods": {
+        "name": "String methods",
+        "definition": "String methods are built-in Python functions that allow you to modify, analyze, and check text. All methods are called using a dot after the string.",
+        "dynamic_info": "All string methods return a NEW string and do not modify the original one.",
+        "types_list": [
+          {
+            "t": ".upper()",
+            "n": "Uppercase",
+            "ex": "'hi'.upper()",
+            "desc": "Converts all letters to uppercase."
+          },
+          {
+            "t": ".lower()",
+            "n": "Lowercase",
+            "ex": "'HI'.lower()",
+            "desc": "Converts all letters to lowercase."
+          },
+          {
+            "t": ".capitalize()",
+            "n": "First letter",
+            "ex": "'python'.capitalize()",
+            "desc": "Makes the first letter of the string uppercase."
+          },
+          {
+            "t": ".title()",
+            "n": "Title case",
+            "ex": "'hello world'.title()",
+            "desc": "Capitalizes the first letter of each word."
+          },
+          {
+            "t": ".strip()",
+            "n": "Remove spaces",
+            "ex": "' hi '.strip()",
+            "desc": "Removes spaces at the beginning and end of the string."
+          },
+          {
+            "t": ".lstrip()",
+            "n": "Remove left spaces",
+            "ex": "' hi'.lstrip()",
+            "desc": "Removes spaces only from the left side."
+          },
+          {
+            "t": ".rstrip()",
+            "n": "Remove right spaces",
+            "ex": "'hi '.rstrip()",
+            "desc": "Removes spaces only from the right side."
+          },
+          {
+            "t": ".replace()",
+            "n": "Replace",
+            "ex": "'hi'.replace('h','H')",
+            "desc": "Replaces one part of the string with another."
+          },
+          {
+            "t": ".split()",
+            "n": "Split",
+            "ex": "'a b c'.split()",
+            "desc": "Splits the string into a list."
+          },
+          {
+            "t": ".join()",
+            "n": "Join",
+            "ex": "'-'.join(['a','b','c'])",
+            "desc": "Joins a list of strings into one string."
+          },
+          {
+            "t": ".find()",
+            "n": "Find",
+            "ex": "'hello'.find('e')",
+            "desc": "Returns the index of a character or -1."
+          },
+          {
+            "t": ".count()",
+            "n": "Count",
+            "ex": "'hello'.count('l')",
+            "desc": "Counts how many times a value appears."
+          },
+          {
+            "t": ".startswith()",
+            "n": "Starts with",
+            "ex": "'python'.startswith('py')",
+            "desc": "Checks if the string starts with a value."
+          },
+          {
+            "t": ".endswith()",
+            "n": "Ends with",
+            "ex": "'python'.endswith('on')",
+            "desc": "Checks if the string ends with a value."
+          },
+          {
+            "t": ".isdigit()",
+            "n": "Digits only",
+            "ex": "'123'.isdigit()",
+            "desc": "Returns True if the string contains only digits."
+          },
+          {
+            "t": ".isalpha()",
+            "n": "Letters only",
+            "ex": "'abc'.isalpha()",
+            "desc": "Returns True if the string contains only letters."
+          },
+          {
+            "t": ".isalnum()",
+            "n": "Letters and digits",
+            "ex": "'abc123'.isalnum()",
+            "desc": "Returns True if the string contains only letters and digits."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/methods.webp",
+            "title": "String methods",
+            "text": "Methods are called using a dot and parentheses."
+          }
+        ],
+        "pro_tip": "Methods can be chained one after another.",
+        "warning": "Do not forget the parentheses () — without them the method will not work.",
         "video_id": "пусто"
       }
     }

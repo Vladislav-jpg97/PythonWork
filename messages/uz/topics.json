@@ -13,7 +13,7 @@
     "themes": [
       {
         "id": "theme_0",
-        "name": "0. Tayyorgarlik: O'rnatish",
+        "name": "Tayyorgarlik: O'rnatish",
         "subthemes": [
           {
             "id": "install_python",
@@ -27,7 +27,7 @@
       },
       {
         "id": "theme_1",
-        "name": "1. Asoslar: O'zgaruvchilar",
+        "name": "Asoslar: O'zgaruvchilar",
         "subthemes": [
           {
             "id": "vars",
@@ -44,8 +44,26 @@
         ]
       },
       {
+        "id": "theme_strings",
+        "name": "Satrlar (str)",
+        "subthemes": [
+          {
+            "id": "strings_basics",
+            "name": "Satr nima"
+          },
+          {
+            "id": "strings_index",
+            "name": "Indekslar va kesmalar"
+          },
+          {
+            "id": "strings_methods",
+            "name": "Satr metodlari"
+          }
+        ]
+      },
+      {
         "id": "theme_2",
-        "name": "2. Boshqaruv konstruksiyalari",
+        "name": "Boshqaruv konstruksiyalari",
         "subthemes": [
           {
             "id": "conditions",
@@ -192,21 +210,9 @@
         "slides": [
           {
             "id": 1,
-            "img": "/img/vars_1.webp",
+            "img": "https://skillbox.ru/upload/setka_images/14234204082022_5c20dcbcfbab07ab6c2df7e27444d5ac2afca569.png",
             "title": "O‘zgaruvchi nima",
             "text": "Qiymat saqlanadigan nomli quti."
-          },
-          {
-            "id": 2,
-            "img": "/img/vars_2.webp",
-            "title": "Son va matn",
-            "text": "5 — son, '5' — matn."
-          },
-          {
-            "id": 3,
-            "img": "/img/vars_3.webp",
-            "title": "Nomlash",
-            "text": "O‘zgaruvchi nomlari tushunarli bo‘lsin."
           }
         ],
         "pro_tip": "Yaxshi nomlangan o‘zgaruvchi kodni tushunishni osonlashtiradi.",
@@ -234,21 +240,9 @@
         "slides": [
           {
             "id": 1,
-            "img": "/img/io_1.webp",
+            "img": "/img/print-input/printinput.jpg",
             "title": "print funksiyasi",
             "text": "Bir nechta qiymatni vergul bilan ajratib chiqarish mumkin: print('Hisob:', score)."
-          },
-          {
-            "id": 2,
-            "img": "/img/io_2.webp",
-            "title": "input ichidagi savol",
-            "text": "input ichida ko'rsatma yozish mumkin: input('Ismingiz nima? ')."
-          },
-          {
-            "id": 3,
-            "img": "/img/io_3.webp",
-            "title": "f-satrlar",
-            "text": "Eng qulay chiqarish usuli: print(f'Salom, {name}!') o'zgaruvchi qiymatini to'g'ridan-to'g'ri matnga qo'yadi."
           }
         ],
         "pro_tip": "Agar konsolda bo'sh qator tashlamoqchi bo'lsangiz, argumentlarsiz bo'sh print() qo'shing.",
@@ -282,21 +276,9 @@
         "slides": [
           {
             "id": 1,
-            "img": "/img/syntax_1.webp",
+            "img": "https://skillbox.ru/upload/setka_images/14234204082022_5c20dcbcfbab07ab6c2df7e27444d5ac2afca569.png",
             "title": "Izohlar nima uchun kerak",
             "text": "Ular sizga va hamkasblaringizga kodni vaqt o'tgandan keyin tushunishga yordam beradi."
-          },
-          {
-            "id": 2,
-            "img": "/img/syntax_2.webp",
-            "title": "Tur xatoligi",
-            "text": "Agar son va matnni qo'shmoqchi bo'lsangiz '5' + 5, Python TypeError xatosini beradi."
-          },
-          {
-            "id": 3,
-            "img": "/img/syntax_3.webp",
-            "title": "To'g'ri qo'shish",
-            "text": "Avval matnni songa aylantiring: int('5') + 5. Endi natija 10 bo'ladi."
           }
         ],
         "pro_tip": "Izohlarni shunday yozingki, sizdan keyin kodni o'qiydigan odam sizning manzilingizni biladigan jahldor inson bo'lmasin.",
@@ -445,6 +427,396 @@
         ],
         "pro_tip": "Takrorlanishlar sonini bilsangiz for, bilmasangiz while-dan foydalaning.",
         "warning": "while ichida qiymat o'zgarayotganiga ishonch hosil qiling, aks holda dastur 'osilib' qoladi.",
+        "video_id": "пусто"
+      },
+      "strings_basics": {
+        "name": "Python’da satrlar",
+        "definition": "Satr — bu str deb ataladigan ma’lumot turi bo‘lib, matnni saqlash uchun ishlatiladi. Matn deganda harflar, so‘zlar, raqamlar, bo‘sh joylar va maxsus belgilar tushuniladi. Python’da satrlar har doim qo‘shtirnoq yoki birtirnoq ichida yoziladi.",
+        "dynamic_info": "Python’da satrlar o‘zgarmas (immutable). Bu degani satr yaratilgandan keyin uning ichidagi belgini to‘g‘ridan-to‘g‘ri o‘zgartirib bo‘lmaydi. Har qanday o‘zgarish yangi satr yaratadi.",
+        "types_list": [
+          {
+            "t": "str",
+            "n": "Satr yaratish",
+            "ex": "text = 'Salom'",
+            "desc": "Qo‘shtirnoq ichidagi matn satr hisoblanadi."
+          },
+          {
+            "t": "len()",
+            "n": "Satr uzunligi",
+            "ex": "len('Python')",
+            "desc": "Satr ichidagi belgilar sonini qaytaradi."
+          },
+          {
+            "t": "+",
+            "n": "Satrlarni qo‘shish",
+            "ex": "'Py' + 'thon'",
+            "desc": "Ikki satrni bitta yangi satrga birlashtiradi."
+          },
+          {
+            "t": "*",
+            "n": "Satrni takrorlash",
+            "ex": "'ha' * 3",
+            "desc": "Satrni ko‘rsatilgan marta takrorlaydi."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/str1.webp",
+            "title": "Satr",
+            "text": "Qo‘shtirnoq ichidagi har qanday matn — satr."
+          }
+        ],
+        "pro_tip": "Satrlar bilan ishlaganda f-string juda qulay.",
+        "warning": "Satr ichidagi belgini o‘zgartirish xatoga olib keladi.",
+        "video_id": "пусто"
+      },
+      "strings_index": {
+        "name": "Indekslar va kesmalar",
+        "definition": "Satr ichidagi har bir belgi indeksga ega. Indekslar 0 dan boshlanadi. Kesmalar satrning bir qismini olish imkonini beradi.",
+        "dynamic_info": "Manfiy indekslardan ham foydalanish mumkin. -1 oxirgi belgini bildiradi.",
+        "types_list": [
+          {
+            "t": "[i]",
+            "n": "Indeks",
+            "ex": "word[0]",
+            "desc": "Ko‘rsatilgan indeksdagi belgini qaytaradi."
+          },
+          {
+            "t": "[start:end]",
+            "n": "Oddiy kesma",
+            "ex": "word[1:4]",
+            "desc": "start dan end gacha bo‘lgan qismini oladi."
+          },
+          {
+            "t": "[:end]",
+            "n": "Boshlanishdan",
+            "ex": "word[:3]",
+            "desc": "Satr boshidan ko‘rsatilgan indeksgacha oladi."
+          },
+          {
+            "t": "[start:]",
+            "n": "Oxirigacha",
+            "ex": "word[2:]",
+            "desc": "Ko‘rsatilgan joydan satr oxirigacha oladi."
+          },
+          {
+            "t": "[::step]",
+            "n": "Qadam bilan",
+            "ex": "word[::2]",
+            "desc": "Belgilarni qadam bilan tanlaydi."
+          },
+          {
+            "t": "[::-1]",
+            "n": "Teskari satr",
+            "ex": "word[::-1]",
+            "desc": "Satrni butunlay teskari qiladi."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/index.webp",
+            "title": "Indekslar",
+            "text": "Birinchi belgi har doim 0 indeksga ega."
+          }
+        ],
+        "pro_tip": "Kesmalardan foydalanish juda kuchli imkoniyat beradi.",
+        "warning": "Mavjud bo‘lmagan indeks xatoga olib keladi.",
+        "video_id": "пусто"
+      },
+      "strings_methods": {
+        "name": "Satr metodlari",
+        "definition": "Satr metodlari — bu matn bilan ishlash uchun tayyor funksiyalar. Ular nuqta orqali chaqiriladi.",
+        "dynamic_info": "Barcha satr metodlari yangi satr qaytaradi, asl satr o‘zgarmaydi.",
+        "types_list": [
+          {
+            "t": ".upper()",
+            "n": "Katta harflar",
+            "ex": "'hi'.upper()",
+            "desc": "Barcha harflarni katta qiladi."
+          },
+          {
+            "t": ".lower()",
+            "n": "Kichik harflar",
+            "ex": "'HI'.lower()",
+            "desc": "Barcha harflarni kichik qiladi."
+          },
+          {
+            "t": ".capitalize()",
+            "n": "Birinchi harf",
+            "ex": "'python'.capitalize()",
+            "desc": "Birinchi harfni katta qiladi."
+          },
+          {
+            "t": ".strip()",
+            "n": "Bo‘sh joylarni olib tashlash",
+            "ex": "' hi '.strip()",
+            "desc": "Boshlanish va oxiridagi bo‘sh joylarni olib tashlaydi."
+          },
+          {
+            "t": ".replace()",
+            "n": "Almashtirish",
+            "ex": "'hi'.replace('h','H')",
+            "desc": "Belgilarni almashtiradi."
+          },
+          {
+            "t": ".split()",
+            "n": "Bo‘lish",
+            "ex": "'a b c'.split()",
+            "desc": "Satrni ro‘yxatga bo‘ladi."
+          },
+          {
+            "t": ".join()",
+            "n": "Birlashtirish",
+            "ex": "'-'.join(['a','b'])",
+            "desc": "Ro‘yxatdan satr yasaydi."
+          },
+          {
+            "t": ".find()",
+            "n": "Qidirish",
+            "ex": "'hello'.find('e')",
+            "desc": "Belgining indeksini topadi."
+          },
+          {
+            "t": ".count()",
+            "n": "Sanash",
+            "ex": "'hello'.count('l')",
+            "desc": "Belgilar sonini sanaydi."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/methods.webp",
+            "title": "Metodlar",
+            "text": "Metodlar nuqta orqali chaqiriladi."
+          }
+        ],
+        "pro_tip": "Metodlarni zanjir qilib ishlatish mumkin.",
+        "warning": "Metod chaqirganda () ni unutma.",
+        "video_id": "пусто"
+      },
+      "strings_basics": {
+        "name": "Python'da satrlar",
+        "definition": "Satr — bu matnni saqlash uchun ishlatiladigan str turidagi maʼlumotdir. Matn deganda hamma narsa tushuniladi: so‘zlar, gaplar, matn ko‘rinishidagi sonlar, bo‘sh joylar va maxsus belgilar. Masalan: odamning ismi, foydalanuvchiga xabar, parol, fayl yo‘li. Python’da satrlar albatta qo‘shtirnoq yoki birtirnoq ichida yoziladi.",
+        "dynamic_info": "Juda muhim: Python’da satrlar o‘zgarmas (immutable). Bu degani, satr yaratilgandan keyin uning ichidagi alohida belgini to‘g‘ridan-to‘g‘ri o‘zgartirib bo‘lmaydi. Har qanday “o‘zgarish” aslida yangi satr yaratadi.",
+        "types_list": [
+          {
+            "t": "str",
+            "n": "Satr yaratish",
+            "ex": "text = 'Salom'",
+            "desc": "Satr yaratadi va uni o‘zgaruvchiga saqlaydi. Matn albatta qo‘shtirnoq yoki birtirnoq ichida bo‘lishi kerak."
+          },
+          {
+            "t": "len()",
+            "n": "Satr uzunligi",
+            "ex": "len('Python')",
+            "desc": "Satr ichidagi belgilar sonini qaytaradi. Harflar, raqamlar, bo‘sh joylar va belgilar hisobga olinadi."
+          },
+          {
+            "t": "+",
+            "n": "Satrlarni birlashtirish",
+            "ex": "'Py' + 'thon'",
+            "desc": "Ikki satrni bitta yangi satrga birlashtiradi."
+          },
+          {
+            "t": "*",
+            "n": "Satrni takrorlash",
+            "ex": "'ha' * 3",
+            "desc": "Satrni ko‘rsatilgan marta takrorlaydi."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/str1.webp",
+            "title": "Satr nima",
+            "text": "Python’da qo‘shtirnoq ichidagi har qanday matn — bu satr."
+          }
+        ],
+        "pro_tip": "O‘zgaruvchilarni matnga qulay qo‘shish uchun f-satrlardan foydalan.",
+        "warning": "Satr ichidagi belgini to‘g‘ridan-to‘g‘ri o‘zgartirish xatolikka olib keladi.",
+        "video_id": "пусто"
+      },
+      "strings_index": {
+        "name": "Satr indekslari va kesmalar",
+        "definition": "Satr ichidagi har bir belgi o‘z raqamiga ega — indeks. Indekslar 0 dan boshlanadi. Bu degani, satrning birinchi belgisi 0 indeksga ega, ikkinchisi — 1 va hokazo. Kesmalar satrning bir qismini olish imkonini beradi.",
+        "dynamic_info": "Python manfiy indekslarni qo‘llab-quvvatlaydi. -1 indeksi satrning oxirgi belgisini, -2 esa oxiridan oldingi belgini bildiradi.",
+        "types_list": [
+          {
+            "t": "[i]",
+            "n": "Indeks",
+            "ex": "word[0]",
+            "desc": "Indeks bo‘yicha bitta belgini qaytaradi."
+          },
+          {
+            "t": "[start:end]",
+            "n": "Oddiy kesma",
+            "ex": "word[1:4]",
+            "desc": "start indeksidan end indeksigacha bo‘lgan qismini qaytaradi, end kiritilmaydi."
+          },
+          {
+            "t": "[:end]",
+            "n": "Boshlanishdan kesma",
+            "ex": "word[:3]",
+            "desc": "Satr boshidan ko‘rsatilgan indeksgacha bo‘lgan qismini oladi."
+          },
+          {
+            "t": "[start:]",
+            "n": "Oxirigacha kesma",
+            "ex": "word[2:]",
+            "desc": "Ko‘rsatilgan indeksdan satr oxirigacha bo‘lgan qismini oladi."
+          },
+          {
+            "t": "[:]",
+            "n": "To‘liq kesma",
+            "ex": "word[:]",
+            "desc": "Butun satr nusxasini yaratadi."
+          },
+          {
+            "t": "[start:end:step]",
+            "n": "Qadam bilan kesma",
+            "ex": "word[::2]",
+            "desc": "Belgilarni ko‘rsatilgan qadam bilan oladi."
+          },
+          {
+            "t": "[::-1]",
+            "n": "Satrni teskari aylantirish",
+            "ex": "word[::-1]",
+            "desc": "Satrni to‘liq teskari tartibda qaytaradi."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/index.webp",
+            "title": "Indekslar",
+            "text": "Birinchi belgi har doim 0 indeksga ega."
+          }
+        ],
+        "pro_tip": "Kesmalar satrlar bilan ishlashdagi eng kuchli vositalardan biridir.",
+        "warning": "Mavjud bo‘lmagan indeksga murojaat qilish IndexError xatosini chiqaradi.",
+        "video_id": "пусто"
+      },
+      "strings_methods": {
+        "name": "Satr metodlari",
+        "definition": "Satr metodlari — bu Python’ning ichki funksiyalari bo‘lib, ular matnni o‘zgartirish, tahlil qilish va tekshirish imkonini beradi. Barcha metodlar satrdan keyin nuqta orqali chaqiriladi.",
+        "dynamic_info": "Barcha satr metodlari YANGI satr qaytaradi va asl satrni o‘zgartirmaydi.",
+        "types_list": [
+          {
+            "t": ".upper()",
+            "n": "Katta harflar",
+            "ex": "'hi'.upper()",
+            "desc": "Barcha harflarni katta qiladi."
+          },
+          {
+            "t": ".lower()",
+            "n": "Kichik harflar",
+            "ex": "'HI'.lower()",
+            "desc": "Barcha harflarni kichik qiladi."
+          },
+          {
+            "t": ".capitalize()",
+            "n": "Birinchi harf",
+            "ex": "'python'.capitalize()",
+            "desc": "Satrning faqat birinchi harfini katta qiladi."
+          },
+          {
+            "t": ".title()",
+            "n": "Sarlavha",
+            "ex": "'hello world'.title()",
+            "desc": "Har bir so‘zning birinchi harfini katta qiladi."
+          },
+          {
+            "t": ".strip()",
+            "n": "Bo‘sh joylarni olib tashlash",
+            "ex": "' hi '.strip()",
+            "desc": "Satr boshidagi va oxiridagi bo‘sh joylarni olib tashlaydi."
+          },
+          {
+            "t": ".lstrip()",
+            "n": "Chapdan olib tashlash",
+            "ex": "' hi'.lstrip()",
+            "desc": "Faqat chap tomondagi bo‘sh joylarni olib tashlaydi."
+          },
+          {
+            "t": ".rstrip()",
+            "n": "O‘ngdan olib tashlash",
+            "ex": "'hi '.rstrip()",
+            "desc": "Faqat o‘ng tomondagi bo‘sh joylarni olib tashlaydi."
+          },
+          {
+            "t": ".replace()",
+            "n": "Almashtirish",
+            "ex": "'hi'.replace('h','H')",
+            "desc": "Satrning bir qismini boshqasiga almashtiradi."
+          },
+          {
+            "t": ".split()",
+            "n": "Bo‘lish",
+            "ex": "'a b c'.split()",
+            "desc": "Satrni ro‘yxatga bo‘lib beradi."
+          },
+          {
+            "t": ".join()",
+            "n": "Birlashtirish",
+            "ex": "'-'.join(['a','b','c'])",
+            "desc": "Satrlar ro‘yxatini bitta satrga birlashtiradi."
+          },
+          {
+            "t": ".find()",
+            "n": "Qidirish",
+            "ex": "'hello'.find('e')",
+            "desc": "Belgining indeksini yoki -1 ni qaytaradi."
+          },
+          {
+            "t": ".count()",
+            "n": "Sanash",
+            "ex": "'hello'.count('l')",
+            "desc": "Belgining nechta ekanini sanaydi."
+          },
+          {
+            "t": ".startswith()",
+            "n": "Boshlanishini tekshirish",
+            "ex": "'python'.startswith('py')",
+            "desc": "Satr berilgan qiymat bilan boshlanishini tekshiradi."
+          },
+          {
+            "t": ".endswith()",
+            "n": "Tugashini tekshirish",
+            "ex": "'python'.endswith('on')",
+            "desc": "Satr berilgan qiymat bilan tugashini tekshiradi."
+          },
+          {
+            "t": ".isdigit()",
+            "n": "Faqat raqamlar",
+            "ex": "'123'.isdigit()",
+            "desc": "Agar satr faqat raqamlardan iborat bo‘lsa True qaytaradi."
+          },
+          {
+            "t": ".isalpha()",
+            "n": "Faqat harflar",
+            "ex": "'abc'.isalpha()",
+            "desc": "Agar satr faqat harflardan iborat bo‘lsa True qaytaradi."
+          },
+          {
+            "t": ".isalnum()",
+            "n": "Harflar va raqamlar",
+            "ex": "'abc123'.isalnum()",
+            "desc": "Agar satr faqat harflar va raqamlardan iborat bo‘lsa True qaytaradi."
+          }
+        ],
+        "slides": [
+          {
+            "id": 1,
+            "img": "/img/strings/methods.webp",
+            "title": "Satr metodlari",
+            "text": "Metodlar nuqta va qavslar orqali chaqiriladi."
+          }
+        ],
+        "pro_tip": "Metodlarni ketma-ket zanjir qilib chaqirish mumkin.",
+        "warning": "Qavslarni () unutma — aks holda metod ishlamaydi.",
         "video_id": "пусто"
       }
     }
