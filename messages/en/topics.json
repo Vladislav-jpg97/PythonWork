@@ -62,6 +62,32 @@
         ]
       },
       {
+        "id": "theme_lists",
+        "name": "Lists (list)",
+        "subthemes": [
+          {
+            "id": "lists_basics",
+            "name": "What are lists"
+          },
+          {
+            "id": "lists_methods",
+            "name": "List methods"
+          },
+          {
+            "id": "lists_functions",
+            "name": "Functions for lists"
+          },
+          {
+            "id": "lists_slices",
+            "name": "List slices"
+          },
+          {
+            "id": "lists_nested",
+            "name": "Nested lists"
+          }
+        ]
+      },
+      {
         "id": "theme_2",
         "name": "Control Flow",
         "subthemes": [
@@ -430,174 +456,6 @@
       },
       "strings_basics": {
         "name": "Strings in Python",
-        "definition": "A string is a data type called str that is used to store text. Text includes letters, words, numbers as text, spaces and special symbols. In Python, strings must be written inside single or double quotes.",
-        "dynamic_info": "Strings in Python are immutable. This means you cannot change a character inside a string after it is created. Any change creates a new string.",
-        "types_list": [
-          {
-            "t": "str",
-            "n": "Create string",
-            "ex": "text = 'Hello'",
-            "desc": "Creates a string and stores it in a variable."
-          },
-          {
-            "t": "len()",
-            "n": "String length",
-            "ex": "len('Python')",
-            "desc": "Returns the number of characters in a string."
-          },
-          {
-            "t": "+",
-            "n": "Concatenation",
-            "ex": "'Py' + 'thon'",
-            "desc": "Joins two strings into one."
-          },
-          {
-            "t": "*",
-            "n": "Repeat string",
-            "ex": "'ha' * 3",
-            "desc": "Repeats the string multiple times."
-          }
-        ],
-        "slides": [
-          {
-            "id": 1,
-            "img": "/img/strings/str1.webp",
-            "title": "String",
-            "text": "Any text inside quotes is a string."
-          }
-        ],
-        "pro_tip": "Use f-strings for easy text formatting.",
-        "warning": "You cannot change a character directly inside a string.",
-        "video_id": "пусто"
-      },
-      "strings_index": {
-        "name": "Indexes and slices",
-        "definition": "Each character in a string has an index. Indexes start from 0. Slices allow you to get a part of a string.",
-        "dynamic_info": "Negative indexes are allowed. Index -1 means the last character.",
-        "types_list": [
-          {
-            "t": "[i]",
-            "n": "Index",
-            "ex": "word[0]",
-            "desc": "Returns the character at the given index."
-          },
-          {
-            "t": "[start:end]",
-            "n": "Slice",
-            "ex": "word[1:4]",
-            "desc": "Returns part of the string."
-          },
-          {
-            "t": "[:end]",
-            "n": "From start",
-            "ex": "word[:3]",
-            "desc": "Takes characters from the beginning."
-          },
-          {
-            "t": "[start:]",
-            "n": "To end",
-            "ex": "word[2:]",
-            "desc": "Takes characters to the end of the string."
-          },
-          {
-            "t": "[::step]",
-            "n": "Step slice",
-            "ex": "word[::2]",
-            "desc": "Takes characters with a step."
-          },
-          {
-            "t": "[::-1]",
-            "n": "Reverse",
-            "ex": "word[::-1]",
-            "desc": "Reverses the string."
-          }
-        ],
-        "slides": [
-          {
-            "id": 1,
-            "img": "/img/strings/index.webp",
-            "title": "Indexes",
-            "text": "The first character has index 0."
-          }
-        ],
-        "pro_tip": "Slices are a very powerful feature in Python.",
-        "warning": "Accessing a non-existing index causes an error.",
-        "video_id": "пусто"
-      },
-      "strings_methods": {
-        "name": "String methods",
-        "definition": "String methods are built-in functions used to work with text. They are called using a dot.",
-        "dynamic_info": "All string methods return a new string and do not change the original one.",
-        "types_list": [
-          {
-            "t": ".upper()",
-            "n": "Uppercase",
-            "ex": "'hi'.upper()",
-            "desc": "Converts all letters to uppercase."
-          },
-          {
-            "t": ".lower()",
-            "n": "Lowercase",
-            "ex": "'HI'.lower()",
-            "desc": "Converts all letters to lowercase."
-          },
-          {
-            "t": ".capitalize()",
-            "n": "Capitalize",
-            "ex": "'python'.capitalize()",
-            "desc": "Makes the first letter uppercase."
-          },
-          {
-            "t": ".strip()",
-            "n": "Remove spaces",
-            "ex": "' hi '.strip()",
-            "desc": "Removes spaces at the beginning and end."
-          },
-          {
-            "t": ".replace()",
-            "n": "Replace",
-            "ex": "'hi'.replace('h','H')",
-            "desc": "Replaces part of a string."
-          },
-          {
-            "t": ".split()",
-            "n": "Split",
-            "ex": "'a b c'.split()",
-            "desc": "Splits a string into a list."
-          },
-          {
-            "t": ".join()",
-            "n": "Join",
-            "ex": "'-'.join(['a','b'])",
-            "desc": "Joins a list into a string."
-          },
-          {
-            "t": ".find()",
-            "n": "Find",
-            "ex": "'hello'.find('e')",
-            "desc": "Finds the index of a character."
-          },
-          {
-            "t": ".count()",
-            "n": "Count",
-            "ex": "'hello'.count('l')",
-            "desc": "Counts occurrences of a character."
-          }
-        ],
-        "slides": [
-          {
-            "id": 1,
-            "img": "/img/strings/methods.webp",
-            "title": "Methods",
-            "text": "Methods are called using dot notation."
-          }
-        ],
-        "pro_tip": "You can chain methods together.",
-        "warning": "Always use parentheses () when calling methods.",
-        "video_id": "пусто"
-      },
-      "strings_basics": {
-        "name": "Strings in Python",
         "definition": "A string is a data type called str that is used to store text. Text means everything: words, sentences, numbers written as text, spaces, and special characters. For example: a person's name, a user message, a password, or a file path. In Python, strings must always be written inside single or double quotes.",
         "dynamic_info": "It is very important to remember: strings in Python are immutable. This means that after a string is created, you cannot change a single character inside it. Any “change” actually creates a new string.",
         "types_list": [
@@ -636,7 +494,7 @@
         ],
         "pro_tip": "Use f-strings to conveniently insert variables into text.",
         "warning": "Trying to change a string character directly will cause an error.",
-        "video_id": "пусто"
+        "video_id": "GmMD6gQYWe4?t=602"
       },
       "strings_index": {
         "name": "String indexes and slices",
@@ -696,7 +554,7 @@
         ],
         "pro_tip": "Slices are one of the most powerful tools for working with strings.",
         "warning": "Accessing a non-existing index raises an IndexError.",
-        "video_id": "пусто"
+        "video_id": "GmMD6gQYWe4?t=602"
       },
       "strings_methods": {
         "name": "String methods",
@@ -816,7 +674,270 @@
         ],
         "pro_tip": "Methods can be chained one after another.",
         "warning": "Do not forget the parentheses () — without them the method will not work.",
-        "video_id": "пусто"
+        "video_id": "GmMD6gQYWe4?t=602"
+      },
+      "lists_basics": {
+        "video_id": "пусто",
+        "name": "Lists in Python",
+        "definition": "A list is a data type called list that is used to store multiple values in one variable. A list can contain numbers, strings, and even other lists. Elements are ordered and have indexes.",
+        "dynamic_info": "Lists are mutable, which means you can add, remove, and change elements after creation.",
+        "types_list": [
+          {
+            "t": "list",
+            "n": "Create a list",
+            "ex": "a = [1, 2, 3]",
+            "desc": "Creates a list with three numbers."
+          },
+          {
+            "t": "[]",
+            "n": "Empty list",
+            "ex": "a = []",
+            "desc": "Creates an empty list."
+          }
+        ],
+        "pro_tip": "Lists are one of the most used data types in Python.",
+        "warning": "List indexing starts from 0."
+      },
+      "lists_methods": {
+        "video_id": "пусто",
+        "name": "List methods",
+        "definition": "List methods allow you to add, remove, sort, and modify elements. Methods are called using a dot.",
+        "dynamic_info": "Most methods modify the original list.",
+        "types_list": [
+          {
+            "t": "append()",
+            "n": "Add to end",
+            "ex": "a.append(5)",
+            "desc": "Adds an element to the end."
+          },
+          {
+            "t": "insert()",
+            "n": "Insert by index",
+            "ex": "a.insert(1, 10)",
+            "desc": "Inserts an element at index."
+          },
+          {
+            "t": "extend()",
+            "n": "Extend list",
+            "ex": "a.extend([6, 7])",
+            "desc": "Adds elements from another list."
+          },
+          {
+            "t": "remove()",
+            "n": "Remove by value",
+            "ex": "a.remove(2)",
+            "desc": "Removes first matching element."
+          },
+          {
+            "t": "pop()",
+            "n": "Remove by index",
+            "ex": "a.pop(0)",
+            "desc": "Removes and returns element."
+          },
+          {
+            "t": "clear()",
+            "n": "Clear list",
+            "ex": "a.clear()",
+            "desc": "Removes all elements."
+          },
+          {
+            "t": "index()",
+            "n": "Find index",
+            "ex": "a.index(3)",
+            "desc": "Returns element index."
+          },
+          {
+            "t": "count()",
+            "n": "Count elements",
+            "ex": "a.count(3)",
+            "desc": "Counts occurrences."
+          },
+          {
+            "t": "sort()",
+            "n": "Sort",
+            "ex": "a.sort()",
+            "desc": "Sorts ascending."
+          },
+          {
+            "t": "sort(key)",
+            "n": "Sort by function",
+            "ex": "a.sort(key=len)",
+            "desc": "Sorts by rule."
+          },
+          {
+            "t": "sort(reverse)",
+            "n": "Reverse sort",
+            "ex": "a.sort(reverse=True)",
+            "desc": "Sorts descending."
+          },
+          {
+            "t": "reverse()",
+            "n": "Reverse list",
+            "ex": "a.reverse()",
+            "desc": "Reverses order."
+          },
+          {
+            "t": "copy()",
+            "n": "Copy list",
+            "ex": "b = a.copy()",
+            "desc": "Creates a copy."
+          }
+        ],
+        "pro_tip": "sort() and reverse() modify the list.",
+        "warning": "remove() fails if element is missing."
+      },
+      "lists_functions": {
+        "video_id": "пусто",
+        "name": "Functions for lists",
+        "definition": "Functions help analyze and process lists.",
+        "types_list": [
+          {
+            "t": "len()",
+            "n": "Length",
+            "ex": "len(a)",
+            "desc": "Number of elements."
+          },
+          {
+            "t": "min()",
+            "n": "Minimum",
+            "ex": "min(a)",
+            "desc": "Finds smallest value."
+          },
+          {
+            "t": "max()",
+            "n": "Maximum",
+            "ex": "max(a)",
+            "desc": "Finds largest value."
+          },
+          {
+            "t": "sum()",
+            "n": "Sum",
+            "ex": "sum(a)",
+            "desc": "Adds all numbers."
+          },
+          {
+            "t": "in",
+            "n": "Check existence",
+            "ex": "3 in a",
+            "desc": "Checks if element exists."
+          },
+          {
+            "t": "for",
+            "n": "Loop",
+            "ex": "for x in a:",
+            "desc": "Iterates elements."
+          },
+          {
+            "t": "range(len)",
+            "n": "Loop with index",
+            "ex": "for i in range(len(a)):",
+            "desc": "Iterates with index."
+          },
+          {
+            "t": "list()",
+            "n": "Create list",
+            "ex": "list('python')",
+            "desc": "Creates list from string."
+          },
+          {
+            "t": "range()",
+            "n": "Number list",
+            "ex": "list(range(5))",
+            "desc": "Numbers from 0 to 4."
+          },
+          {
+            "t": "sorted()",
+            "n": "Temporary sort",
+            "ex": "sorted(a)",
+            "desc": "Does not change original."
+          }
+        ],
+        "pro_tip": "sorted() is safer.",
+        "warning": "sum() works only with numbers."
+      },
+      "lists_slices": {
+        "video_id": "пусто",
+        "name": "List slices",
+        "definition": "Slices allow you to get parts of a list.",
+        "types_list": [
+          {
+            "t": "[:]",
+            "n": "Whole list",
+            "ex": "a[:]",
+            "desc": "Full copy."
+          },
+          {
+            "t": "[:end]",
+            "n": "From start",
+            "ex": "a[:3]",
+            "desc": "From 0 to 2."
+          },
+          {
+            "t": "[start:]",
+            "n": "To end",
+            "ex": "a[2:]",
+            "desc": "From index 2."
+          },
+          {
+            "t": "[start:end]",
+            "n": "Range",
+            "ex": "a[1:4]",
+            "desc": "From 1 to 3."
+          },
+          {
+            "t": "[::step]",
+            "n": "Step",
+            "ex": "a[::2]",
+            "desc": "Every second element."
+          },
+          {
+            "t": "[start::step]",
+            "n": "Step from index",
+            "ex": "a[1::2]",
+            "desc": "Start with step."
+          },
+          {
+            "t": "[start:end:step]",
+            "n": "Full slice",
+            "ex": "a[1:6:2]",
+            "desc": "Range with step."
+          },
+          {
+            "t": "[::-1]",
+            "n": "Reverse",
+            "ex": "a[::-1]",
+            "desc": "Reverses list."
+          },
+          {
+            "t": "[end:start:-1]",
+            "n": "Reverse range",
+            "ex": "a[5:1:-1]",
+            "desc": "From 5 to 2."
+          }
+        ],
+        "pro_tip": "Slices do not raise errors.",
+        "warning": "Slices return new lists."
+      },
+      "lists_nested": {
+        "video_id": "пусто",
+        "name": "Nested lists",
+        "definition": "A list can contain other lists. Used for tables and matrices.",
+        "types_list": [
+          {
+            "t": "2D",
+            "n": "Matrix",
+            "ex": "matrix[2][2]",
+            "desc": "Two-dimensional list."
+          },
+          {
+            "t": "3D",
+            "n": "Three-dimensional",
+            "ex": "matrix3d[1][1][1]",
+            "desc": "Three-dimensional structure."
+          }
+        ],
+        "pro_tip": "Each [] is a deeper level.",
+        "warning": "Indexes can be confusing."
       }
     }
   }

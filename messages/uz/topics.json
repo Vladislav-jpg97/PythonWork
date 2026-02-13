@@ -62,6 +62,32 @@
         ]
       },
       {
+        "id": "theme_lists",
+        "name": "Ro‘yxatlar (list)",
+        "subthemes": [
+          {
+            "id": "lists_basics",
+            "name": "Ro‘yxatlar nima"
+          },
+          {
+            "id": "lists_methods",
+            "name": "Ro‘yxat metodlari"
+          },
+          {
+            "id": "lists_functions",
+            "name": "Ro‘yxatlar bilan ishlash funksiyalari"
+          },
+          {
+            "id": "lists_slices",
+            "name": "Ro‘yxat kesimlari (slices)"
+          },
+          {
+            "id": "lists_nested",
+            "name": "Ichma-ich ro‘yxatlar"
+          }
+        ]
+      },
+      {
         "id": "theme_2",
         "name": "Boshqaruv konstruksiyalari",
         "subthemes": [
@@ -430,174 +456,6 @@
         "video_id": "пусто"
       },
       "strings_basics": {
-        "name": "Python’da satrlar",
-        "definition": "Satr — bu str deb ataladigan ma’lumot turi bo‘lib, matnni saqlash uchun ishlatiladi. Matn deganda harflar, so‘zlar, raqamlar, bo‘sh joylar va maxsus belgilar tushuniladi. Python’da satrlar har doim qo‘shtirnoq yoki birtirnoq ichida yoziladi.",
-        "dynamic_info": "Python’da satrlar o‘zgarmas (immutable). Bu degani satr yaratilgandan keyin uning ichidagi belgini to‘g‘ridan-to‘g‘ri o‘zgartirib bo‘lmaydi. Har qanday o‘zgarish yangi satr yaratadi.",
-        "types_list": [
-          {
-            "t": "str",
-            "n": "Satr yaratish",
-            "ex": "text = 'Salom'",
-            "desc": "Qo‘shtirnoq ichidagi matn satr hisoblanadi."
-          },
-          {
-            "t": "len()",
-            "n": "Satr uzunligi",
-            "ex": "len('Python')",
-            "desc": "Satr ichidagi belgilar sonini qaytaradi."
-          },
-          {
-            "t": "+",
-            "n": "Satrlarni qo‘shish",
-            "ex": "'Py' + 'thon'",
-            "desc": "Ikki satrni bitta yangi satrga birlashtiradi."
-          },
-          {
-            "t": "*",
-            "n": "Satrni takrorlash",
-            "ex": "'ha' * 3",
-            "desc": "Satrni ko‘rsatilgan marta takrorlaydi."
-          }
-        ],
-        "slides": [
-          {
-            "id": 1,
-            "img": "/img/strings/str1.webp",
-            "title": "Satr",
-            "text": "Qo‘shtirnoq ichidagi har qanday matn — satr."
-          }
-        ],
-        "pro_tip": "Satrlar bilan ishlaganda f-string juda qulay.",
-        "warning": "Satr ichidagi belgini o‘zgartirish xatoga olib keladi.",
-        "video_id": "пусто"
-      },
-      "strings_index": {
-        "name": "Indekslar va kesmalar",
-        "definition": "Satr ichidagi har bir belgi indeksga ega. Indekslar 0 dan boshlanadi. Kesmalar satrning bir qismini olish imkonini beradi.",
-        "dynamic_info": "Manfiy indekslardan ham foydalanish mumkin. -1 oxirgi belgini bildiradi.",
-        "types_list": [
-          {
-            "t": "[i]",
-            "n": "Indeks",
-            "ex": "word[0]",
-            "desc": "Ko‘rsatilgan indeksdagi belgini qaytaradi."
-          },
-          {
-            "t": "[start:end]",
-            "n": "Oddiy kesma",
-            "ex": "word[1:4]",
-            "desc": "start dan end gacha bo‘lgan qismini oladi."
-          },
-          {
-            "t": "[:end]",
-            "n": "Boshlanishdan",
-            "ex": "word[:3]",
-            "desc": "Satr boshidan ko‘rsatilgan indeksgacha oladi."
-          },
-          {
-            "t": "[start:]",
-            "n": "Oxirigacha",
-            "ex": "word[2:]",
-            "desc": "Ko‘rsatilgan joydan satr oxirigacha oladi."
-          },
-          {
-            "t": "[::step]",
-            "n": "Qadam bilan",
-            "ex": "word[::2]",
-            "desc": "Belgilarni qadam bilan tanlaydi."
-          },
-          {
-            "t": "[::-1]",
-            "n": "Teskari satr",
-            "ex": "word[::-1]",
-            "desc": "Satrni butunlay teskari qiladi."
-          }
-        ],
-        "slides": [
-          {
-            "id": 1,
-            "img": "/img/strings/index.webp",
-            "title": "Indekslar",
-            "text": "Birinchi belgi har doim 0 indeksga ega."
-          }
-        ],
-        "pro_tip": "Kesmalardan foydalanish juda kuchli imkoniyat beradi.",
-        "warning": "Mavjud bo‘lmagan indeks xatoga olib keladi.",
-        "video_id": "пусто"
-      },
-      "strings_methods": {
-        "name": "Satr metodlari",
-        "definition": "Satr metodlari — bu matn bilan ishlash uchun tayyor funksiyalar. Ular nuqta orqali chaqiriladi.",
-        "dynamic_info": "Barcha satr metodlari yangi satr qaytaradi, asl satr o‘zgarmaydi.",
-        "types_list": [
-          {
-            "t": ".upper()",
-            "n": "Katta harflar",
-            "ex": "'hi'.upper()",
-            "desc": "Barcha harflarni katta qiladi."
-          },
-          {
-            "t": ".lower()",
-            "n": "Kichik harflar",
-            "ex": "'HI'.lower()",
-            "desc": "Barcha harflarni kichik qiladi."
-          },
-          {
-            "t": ".capitalize()",
-            "n": "Birinchi harf",
-            "ex": "'python'.capitalize()",
-            "desc": "Birinchi harfni katta qiladi."
-          },
-          {
-            "t": ".strip()",
-            "n": "Bo‘sh joylarni olib tashlash",
-            "ex": "' hi '.strip()",
-            "desc": "Boshlanish va oxiridagi bo‘sh joylarni olib tashlaydi."
-          },
-          {
-            "t": ".replace()",
-            "n": "Almashtirish",
-            "ex": "'hi'.replace('h','H')",
-            "desc": "Belgilarni almashtiradi."
-          },
-          {
-            "t": ".split()",
-            "n": "Bo‘lish",
-            "ex": "'a b c'.split()",
-            "desc": "Satrni ro‘yxatga bo‘ladi."
-          },
-          {
-            "t": ".join()",
-            "n": "Birlashtirish",
-            "ex": "'-'.join(['a','b'])",
-            "desc": "Ro‘yxatdan satr yasaydi."
-          },
-          {
-            "t": ".find()",
-            "n": "Qidirish",
-            "ex": "'hello'.find('e')",
-            "desc": "Belgining indeksini topadi."
-          },
-          {
-            "t": ".count()",
-            "n": "Sanash",
-            "ex": "'hello'.count('l')",
-            "desc": "Belgilar sonini sanaydi."
-          }
-        ],
-        "slides": [
-          {
-            "id": 1,
-            "img": "/img/strings/methods.webp",
-            "title": "Metodlar",
-            "text": "Metodlar nuqta orqali chaqiriladi."
-          }
-        ],
-        "pro_tip": "Metodlarni zanjir qilib ishlatish mumkin.",
-        "warning": "Metod chaqirganda () ni unutma.",
-        "video_id": "пусто"
-      },
-      "strings_basics": {
         "name": "Python'da satrlar",
         "definition": "Satr — bu matnni saqlash uchun ishlatiladigan str turidagi maʼlumotdir. Matn deganda hamma narsa tushuniladi: so‘zlar, gaplar, matn ko‘rinishidagi sonlar, bo‘sh joylar va maxsus belgilar. Masalan: odamning ismi, foydalanuvchiga xabar, parol, fayl yo‘li. Python’da satrlar albatta qo‘shtirnoq yoki birtirnoq ichida yoziladi.",
         "dynamic_info": "Juda muhim: Python’da satrlar o‘zgarmas (immutable). Bu degani, satr yaratilgandan keyin uning ichidagi alohida belgini to‘g‘ridan-to‘g‘ri o‘zgartirib bo‘lmaydi. Har qanday “o‘zgarish” aslida yangi satr yaratadi.",
@@ -697,7 +555,7 @@
         ],
         "pro_tip": "Kesmalar satrlar bilan ishlashdagi eng kuchli vositalardan biridir.",
         "warning": "Mavjud bo‘lmagan indeksga murojaat qilish IndexError xatosini chiqaradi.",
-        "video_id": "пусто"
+        "video_id": "GmMD6gQYWe4?t=602"
       },
       "strings_methods": {
         "name": "Satr metodlari",
@@ -817,7 +675,270 @@
         ],
         "pro_tip": "Metodlarni ketma-ket zanjir qilib chaqirish mumkin.",
         "warning": "Qavslarni () unutma — aks holda metod ishlamaydi.",
-        "video_id": "пусто"
+        "video_id": "GmMD6gQYWe4?t=602"
+      },
+      "lists_basics": {
+        "video_id": "пусто",
+        "name": "Python’da ro‘yxatlar",
+        "definition": "Ro‘yxat — bu list ma’lumot turi bo‘lib, bitta o‘zgaruvchida bir nechta qiymatlarni saqlash uchun ishlatiladi. Ro‘yxat ichida sonlar, matnlar va hatto boshqa ro‘yxatlar bo‘lishi mumkin. Elementlar tartiblangan va indekslarga ega.",
+        "dynamic_info": "Ro‘yxatlar o‘zgaruvchan — ya’ni yaratilgandan keyin elementlarni qo‘shish, o‘chirish va o‘zgartirish mumkin.",
+        "types_list": [
+          {
+            "t": "list",
+            "n": "Ro‘yxat yaratish",
+            "ex": "a = [1, 2, 3]",
+            "desc": "Uchta sondan iborat ro‘yxat yaratadi."
+          },
+          {
+            "t": "[]",
+            "n": "Bo‘sh ro‘yxat",
+            "ex": "a = []",
+            "desc": "Elementlarsiz bo‘sh ro‘yxat yaratadi."
+          }
+        ],
+        "pro_tip": "Ro‘yxatlar Python’da eng ko‘p ishlatiladigan ma’lumot turlaridan biridir.",
+        "warning": "Ro‘yxat indekslari 0 dan boshlanadi."
+      },
+      "lists_methods": {
+        "video_id": "пусто",
+        "name": "Ro‘yxat metodlari",
+        "definition": "Ro‘yxat metodlari yordamida element qo‘shish, o‘chirish, saralash va o‘zgartirish mumkin. Metodlar nuqta orqali chaqiriladi.",
+        "dynamic_info": "Ko‘p metodlar ro‘yxatning o‘zini o‘zgartiradi, yangi ro‘yxat yaratmaydi.",
+        "types_list": [
+          {
+            "t": "append()",
+            "n": "Oxiriga qo‘shish",
+            "ex": "a.append(5)",
+            "desc": "Elementni ro‘yxat oxiriga qo‘shadi."
+          },
+          {
+            "t": "insert()",
+            "n": "Indeks bo‘yicha qo‘shish",
+            "ex": "a.insert(1, 10)",
+            "desc": "Berilgan indeksga element joylaydi."
+          },
+          {
+            "t": "extend()",
+            "n": "Ro‘yxatni kengaytirish",
+            "ex": "a.extend([6, 7])",
+            "desc": "Boshqa ro‘yxat elementlarini qo‘shadi."
+          },
+          {
+            "t": "remove()",
+            "n": "Qiymat bo‘yicha o‘chirish",
+            "ex": "a.remove(2)",
+            "desc": "Birinchi mos kelgan elementni o‘chiradi."
+          },
+          {
+            "t": "pop()",
+            "n": "Indeks bo‘yicha o‘chirish",
+            "ex": "a.pop(0)",
+            "desc": "Elementni o‘chiradi va qaytaradi."
+          },
+          {
+            "t": "clear()",
+            "n": "Tozalash",
+            "ex": "a.clear()",
+            "desc": "Barcha elementlarni o‘chiradi."
+          },
+          {
+            "t": "index()",
+            "n": "Indeksni topish",
+            "ex": "a.index(3)",
+            "desc": "Element indeksini qaytaradi."
+          },
+          {
+            "t": "count()",
+            "n": "Sanash",
+            "ex": "a.count(3)",
+            "desc": "Element necha marta uchrashini sanaydi."
+          },
+          {
+            "t": "sort()",
+            "n": "Saralash",
+            "ex": "a.sort()",
+            "desc": "O‘sish tartibida saralaydi."
+          },
+          {
+            "t": "sort(key)",
+            "n": "Funksiya bo‘yicha saralash",
+            "ex": "a.sort(key=len)",
+            "desc": "Qoidaga ko‘ra saralaydi."
+          },
+          {
+            "t": "sort(reverse)",
+            "n": "Teskari saralash",
+            "ex": "a.sort(reverse=True)",
+            "desc": "Kamayish tartibida saralaydi."
+          },
+          {
+            "t": "reverse()",
+            "n": "Teskari aylantirish",
+            "ex": "a.reverse()",
+            "desc": "Elementlar tartibini o‘zgartiradi."
+          },
+          {
+            "t": "copy()",
+            "n": "Nusxa olish",
+            "ex": "b = a.copy()",
+            "desc": "Ro‘yxat nusxasini yaratadi."
+          }
+        ],
+        "pro_tip": "sort() va reverse() asl ro‘yxatni o‘zgartiradi.",
+        "warning": "Agar element bo‘lmasa, remove() xato beradi."
+      },
+      "lists_functions": {
+        "video_id": "пусто",
+        "name": "Ro‘yxatlar uchun funksiyalar",
+        "definition": "Bu funksiyalar ro‘yxatlarni tahlil qilish va qayta ishlash uchun ishlatiladi.",
+        "types_list": [
+          {
+            "t": "len()",
+            "n": "Uzunlik",
+            "ex": "len(a)",
+            "desc": "Elementlar sonini qaytaradi."
+          },
+          {
+            "t": "min()",
+            "n": "Eng kichik",
+            "ex": "min(a)",
+            "desc": "Eng kichik qiymatni topadi."
+          },
+          {
+            "t": "max()",
+            "n": "Eng katta",
+            "ex": "max(a)",
+            "desc": "Eng katta qiymatni topadi."
+          },
+          {
+            "t": "sum()",
+            "n": "Yig‘indi",
+            "ex": "sum(a)",
+            "desc": "Barcha sonlarni qo‘shadi."
+          },
+          {
+            "t": "in",
+            "n": "Mavjudligini tekshirish",
+            "ex": "3 in a",
+            "desc": "Element bor yoki yo‘qligini tekshiradi."
+          },
+          {
+            "t": "for",
+            "n": "Aylanish",
+            "ex": "for x in a:",
+            "desc": "Har bir elementdan o‘tadi."
+          },
+          {
+            "t": "range(len)",
+            "n": "Indeks bilan aylanish",
+            "ex": "for i in range(len(a)):",
+            "desc": "Indekslar bilan aylanish."
+          },
+          {
+            "t": "list()",
+            "n": "Ro‘yxat yaratish",
+            "ex": "list('python')",
+            "desc": "Matndan ro‘yxat yaratadi."
+          },
+          {
+            "t": "range()",
+            "n": "Sonlar ro‘yxati",
+            "ex": "list(range(5))",
+            "desc": "0 dan 4 gacha sonlar."
+          },
+          {
+            "t": "sorted()",
+            "n": "Vaqtinchalik saralash",
+            "ex": "sorted(a)",
+            "desc": "Asl ro‘yxatni o‘zgartirmaydi."
+          }
+        ],
+        "pro_tip": "sorted() xavfsizroq.",
+        "warning": "sum() faqat sonlar bilan ishlaydi."
+      },
+      "lists_slices": {
+        "video_id": "пусто",
+        "name": "Ro‘yxat kesimlari",
+        "definition": "Kesimlar ro‘yxatning bir qismini olishga yordam beradi.",
+        "types_list": [
+          {
+            "t": "[:]",
+            "n": "Butun ro‘yxat",
+            "ex": "a[:]",
+            "desc": "To‘liq nusxa."
+          },
+          {
+            "t": "[:end]",
+            "n": "Boshlanishdan",
+            "ex": "a[:3]",
+            "desc": "0 dan 2 gacha."
+          },
+          {
+            "t": "[start:]",
+            "n": "Oxirigacha",
+            "ex": "a[2:]",
+            "desc": "2-indeksdan oxirigacha."
+          },
+          {
+            "t": "[start:end]",
+            "n": "Oraliq",
+            "ex": "a[1:4]",
+            "desc": "1 dan 3 gacha."
+          },
+          {
+            "t": "[::step]",
+            "n": "Qadam",
+            "ex": "a[::2]",
+            "desc": "Har ikkinchi element."
+          },
+          {
+            "t": "[start::step]",
+            "n": "Qadam bilan",
+            "ex": "a[1::2]",
+            "desc": "1-indeksdan."
+          },
+          {
+            "t": "[start:end:step]",
+            "n": "To‘liq kesim",
+            "ex": "a[1:6:2]",
+            "desc": "Oraliq + qadam."
+          },
+          {
+            "t": "[::-1]",
+            "n": "Teskari",
+            "ex": "a[::-1]",
+            "desc": "Ro‘yxatni aylantiradi."
+          },
+          {
+            "t": "[end:start:-1]",
+            "n": "Teskari oraliq",
+            "ex": "a[5:1:-1]",
+            "desc": "5 dan 2 gacha."
+          }
+        ],
+        "pro_tip": "Kesimlar xato bermaydi.",
+        "warning": "Kesimlar yangi ro‘yxat qaytaradi."
+      },
+      "lists_nested": {
+        "video_id": "пусто",
+        "name": "Ichma-ich ro‘yxatlar",
+        "definition": "Ro‘yxat ichida boshqa ro‘yxatlar bo‘lishi mumkin. Bu jadval va matritsalar uchun ishlatiladi.",
+        "types_list": [
+          {
+            "t": "2D",
+            "n": "Matritsa",
+            "ex": "matrix[2][2]",
+            "desc": "Ikki o‘lchovli ro‘yxat."
+          },
+          {
+            "t": "3D",
+            "n": "Uch o‘lchovli",
+            "ex": "matrix3d[1][1][1]",
+            "desc": "Uch o‘lchovli tuzilma."
+          }
+        ],
+        "pro_tip": "Har bir [] — chuqurlik darajasi.",
+        "warning": "Indekslarda adashish oson."
       }
     }
   }
